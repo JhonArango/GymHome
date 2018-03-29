@@ -1,0 +1,17 @@
+{% extends "BaseInicio.html" %}
+
+{% block content %}
+	<h1>Hola {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.indice}} <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+    <br>
+    {% if current_user.is_anonymous %}
+        <a href="{{ url_for('login') }}">Login</a>&nbsp;&nbsp;&nbsp;
+        {% else %}
+        <a href="{{ url_for('logout') }}">Logout</a>&nbsp;&nbsp;&nbsp;
+    {% endif %}
+    <a href="#">Ayuda</a>&nbsp;&nbsp;
+    <a href="#">Propiedades</a>
+  
+{% endblock %}

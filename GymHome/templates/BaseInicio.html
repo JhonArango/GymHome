@@ -1,0 +1,46 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7-icons.css">
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.colors.min.css">
+
+      <link rel="stylesheet" href="/static/css/styles.css">
+
+      <link rel="stylesheet" href="/static/css/modificacion.css">
+      {% if title %}
+      <title>{{ title }} - GymHome</title>
+      {% else %}
+      <title>Bienvenido a GymHome</title>
+      {% endif %}
+
+
+    </head>
+    <body style="background: #242424; text-align: center;"">
+        <div style="font-size: 1.5em; color: white;">GymHome 
+        <a href="/index" style="color: white;">
+          <i class="material-icons">home</i>
+        </a></div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+         
+        {% block content %}{% endblock %}
+    </body>
+</html>

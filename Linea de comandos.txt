@@ -1,0 +1,53 @@
+Linea de comandos
+
+((Dentro del directorio en el que se va a trabajar))
+
+Para crear el entorno virtual
+$python -m venv venv 
+
+Se activa el entorno
+$venv\Scripts\activate
+
+Se instala flask en el entorno
+pip istall flask
+
+<<Instalar pip>>
+	python -m pip install -U pip
+----------------------------------------------------------------
+se crea archivo.py que contiene 
+from app import app
+
+Se genera directorio appAplicacion
+Se crea __init__.py dentro del directorio.
+se crea routes.py que funciona como controlador
+
+--------------------------------------------------
+
+Despues de crear los demas archivos y el paquete, ejecute el comando
+set FLASK_APP=microblog.py ( windows )
+set FLASK_DEBUG=true ( windows )
+
+---------------------------------------------------------------------------------------
+Para usar formularios Flask
+pip istall flask-wtf
+
+Para usar sqlalchemy(objetos y clases en las bases de datos)
+pip install flask-sqlalchemy
+----------------------------------------------------------------------------------------
+Para poder migrar las bases de datos (Actualizar tablas y demas estructuras de la bd)
+pip install flask-migrate
+----------------------------------------------------------------------------------------
+Para crear repositorio de migracion (solo una vez)
+flask db init
+----------------------------------------------------------------------------------------
+Comando para generar las migraciones automaticas (Despues de los cambios)
+(Tabla de usuarios en este caso) Solo se genera el script de migracion, no se hacen cambios en la BD
+flask db migrate -m "users table" 
+
+Funcion interna de el script migracion que actualiza los cambios en la base de datos
+flask db upgrade
+
+=========================================================
+Impedir que un usuario entre a una pagina sin autentificacion
+
+@login_required (Antes de la funcion de la pagina)
