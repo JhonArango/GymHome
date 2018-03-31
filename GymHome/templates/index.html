@@ -1,6 +1,30 @@
 {% extends "BaseInicio.html" %}
 
 {% block content %}
+    <div id="menu" class="block">
+        <div class="row">
+            <!-- Each "cell" has col-[widht in percents] class -->
+            <div class="col-50">
+                <img id="ejercicios" src="{{ url_for('static', filename='imagenes/ejercicios.jpg') }}"/>
+            </div>
+            <div class="col-50">
+                <img id="alimentacion" src="{{ url_for('static', filename='imagenes/alimentacion.jpg') }}"/>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Each "cell" has col-[widht in percents] class -->
+            <div class="col-50">
+                <img id="suplementacion" src="{{ url_for('static', filename='imagenes/suplementacion.jpg') }}"/>
+            </div>
+            <div class="col-50">
+                <img id="rutina" src="{{ url_for('static', filename='imagenes/rutina.jpg') }}"/>
+            </div>
+        </div>      
+    </div>
+
+
+
+<!--
 	<h1>Hola {{ current_user.username }}!</h1>
     {% for post in posts %}
     <div><p>{{ post.indice}} <b>{{ post.body }}</b></p></div>
@@ -13,5 +37,6 @@
     {% endif %}
     <a href="#">Ayuda</a>&nbsp;&nbsp;
     <a href="#">Propiedades</a>
+-->
   
 {% endblock %}

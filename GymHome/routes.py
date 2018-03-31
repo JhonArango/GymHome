@@ -8,28 +8,17 @@ from werkzeug.urls import url_parse
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
-    posts = [
-        {
-            'indice': 'Uso',
-            'body': 'Si desea conocer como funciona GymHome  dar click a ayuda'
-        },
-        {
-            'indice': 'Propiedades',
-            'body': 'Si desea saber acerca de la configuracion dar click a Propiedades'
-        },
-        {
-        	'indice': 'login',
-            'body': 'Si desea ingresar a la app dar click a login'
-        }
-    ]
-    return render_template('index.html', title='Home',posts=posts)
+    return render_template('index.html', title='Home')
 
 @GymHome.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
+        print("hola1")
         return redirect(url_for('index'))
     form = LoginForm()
+    print("hola2")
     if form.validate_on_submit():
+        print("hola3")
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.verificar_contraseña(form.password.data):
             flash('Usuario invalido o contraseña incorrecta')
@@ -54,6 +43,14 @@ def register():
         flash('Felicitaciones,Tu registro ha sido exitoso!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Registrar', form=form)
+
+@GymHome.route('/menu', methods=['GET', 'POST'])
+def menu():
+    return render_template('menu.html', title='menu')
+
+@GymHome.route('/rutina', methods=['GET', 'POST'])
+def rutina():
+    return render_template('rutina.html', title='menu')
 
 @GymHome.route('/logout')
 def logout():

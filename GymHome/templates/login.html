@@ -1,27 +1,92 @@
-{% extends "BaseInicio.html" %}
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
-{% block content %}
-    <h1>Iniciar Sección</h1>
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
-    </form>
-    <br>
-    <br>
-    <p>Usuario Nuevo? <a href="{{ url_for('register') }}">Click para registrar!</a></p>
-{% endblock %}
+   <link rel="stylesheet" href="static/lib/framework7/css/framework7.ios.min.css">
+   <link rel="stylesheet" href="static/lib/framework7/css/framework7-icons.css">
+   <link rel="stylesheet" href="static/lib/framework7/css/framework7.ios.colors.min.css">
+
+   <link rel="stylesheet" href="static/css/styles.css">
+
+   <link rel="stylesheet" href="static/css/modificacion.css">
+  </head>
+  <body>  
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">GymHome</div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content alert">
+
+            <div data-page = "login-screen" class = "page no-navbar no-toolbar no-swipeback">
+               <br>
+               <br>
+   
+               <div class = "page-content login-screen-content">
+                  <div class = "login-screen-title">Iniciar seccion</div>
+                  
+                  <form method="post">
+                       {{ form.hidden_tag() }}
+                     <div class = "list-block">
+                        <ul>
+                           <li class = "item-content">
+                              <div class = "item-inner">
+                                 <div class = "item-title label">
+                                 {{ form.username.label }}</div>
+                                 <div class = "item-input">
+                                    <input type = "text" name = "username" placeholder = "Enter the username">
+                                 </div>
+                              </div>
+                           </li>
+                           
+                           <li class = "item-content">
+                              <div class = "item-inner">
+                                 <div class = "item-title label">
+                                 {{ form.password.label }}</div>
+                                 <div class = "item-input">
+                                    <input type = "password" name = "password" placeholder = "Enter the password">
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "list-block">
+                       {{ form.submit() }}
+
+                     </div>
+                  </form>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="static/js/my-app.js"></script>
+  </body>
+</html>

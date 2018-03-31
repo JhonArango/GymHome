@@ -5,7 +5,7 @@ from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from GymHome.models import User
 
 class LoginForm(FlaskForm):
-    username = StringField('Nombre de usuario', validators=[DataRequired()])
+    username = StringField('Nombre', validators=[DataRequired()])
     password = PasswordField('Contraseña', validators=[DataRequired()])
     remember_me = BooleanField('Recordarme')
     submit = SubmitField('Ingresar')

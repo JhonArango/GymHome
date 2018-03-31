@@ -1,51 +1,110 @@
-{% extends "BaseInicio.html" %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
-{% block content %}
-    <h1>Registrar</h1>
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.usersurname.label }}<br>
-            {{ form.usersurname(size=32) }}<br>
-            {% for error in form.usersurname.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.edad.label }}<br>
-            {{ form.edad(size=32) }}<br>
-            {% for error in form.edad.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=32) }}<br>
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password2.label }}<br>
-            {{ form.password2(size=32) }}<br>
-            {% for error in form.password2.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7-icons.css">
+      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.colors.min.css">
+
+      <link rel="stylesheet" href="/static/css/styles.css">
+
+      <link rel="stylesheet" href="/static/css/modificacion.css">
+  </head>
+  <body>
+    <p><a href="#" class="open-login-screen">Open Login Screen</a></p>
+    <form class="list form-store-data" id="my-form">
+      <ul>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Name</div>
+              <div class="item-input-wrap">
+                <input type="text" name="name" placeholder="Your name">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">E-mail</div>
+              <div class="item-input-wrap">
+                <input type="email" name="email" placeholder="E-mail">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Gender</div>
+              <div class="item-input-wrap">
+                <select name="gender">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title">Switch</div>
+              <div class="item-after">
+                <label class="toggle">
+                  <input type="checkbox" name="switch" value="yes"><i class="toggle-icon"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </form>
-{% endblock %}
+
+
+
+
+    <div class="block-title">List View Accordion</div>
+    <div class="list accordion-list">
+      <ul>
+        <li class="accordion-item"><a href="#" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">Item 1</div>
+            </div></a>
+          <div class="accordion-item-content">
+            <div class="block">
+              <p>Item 1 content. Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item"><a href="#" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">Item 2</div>
+            </div></a>
+          <div class="accordion-item-content">
+            <div class="block">
+              <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+        </li>        
+      </ul>
+    </div>
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="/static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="/static/js/my-app.js"></script>
+  </body>
+</html>
