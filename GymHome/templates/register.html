@@ -10,101 +10,165 @@
     <!-- Your app title -->
     <title>My App</title>
     <!-- Path to Framework7 Library CSS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.min.css">
-      <link rel="stylesheet" href="/static/lib/framework7/css/framework7-icons.css">
-      <link rel="stylesheet" href="/static/lib/framework7/css/framework7.ios.colors.min.css">
-
-      <link rel="stylesheet" href="/static/css/styles.css">
-
-      <link rel="stylesheet" href="/static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
   </head>
-  <body>
-    <p><a href="#" class="open-login-screen">Open Login Screen</a></p>
-    <form class="list form-store-data" id="my-form">
-      <ul>
-        <li>
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Name</div>
-              <div class="item-input-wrap">
-                <input type="text" name="name" placeholder="Your name">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">E-mail</div>
-              <div class="item-input-wrap">
-                <input type="email" name="email" placeholder="E-mail">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Gender</div>
-              <div class="item-input-wrap">
-                <select name="gender">
-                  <option value="male" selected>Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Switch</div>
-              <div class="item-after">
-                <label class="toggle">
-                  <input type="checkbox" name="switch" value="yes"><i class="toggle-icon"></i>
-                </label>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </form>
+  <body >
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
 
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            
 
+              <div id="navbar" class="navbar">
+                <div style="background-color: #062042" class="navbar-inner">
+                    <div id="registroBox" class="left">
+                        <a href="{{url_for('index')}}" class="button external link external">
+                          <i class="icon icon-back"></i>
+                        </a>
+                    </div>
+                    <div id="logoImagenBox" class="title">
+                      <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                    </div>
+                </div>
+              </div>
 
+              <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                <div class="toolbar-inner">
+                    <a href="#" class="link">
+                      <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                    </a>
+                    <a href="#" class="link">
+                      <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                    </a>
+                    <a href="{{url_for('index')}}" class="link external">
+                      <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                    </a>
+                    <a href="#" class="link">
+                      <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                    </a>
+                    <a href="#" class="link">
+                      <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                    </a>
+                </div>
+                  </div> 
 
-    <div class="block-title">List View Accordion</div>
-    <div class="list accordion-list">
-      <ul>
-        <li class="accordion-item"><a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <div class="item-title">Item 1</div>
-            </div></a>
-          <div class="accordion-item-content">
-            <div class="block">
-              <p>Item 1 content. Lorem ipsum dolor sit amet...</p>
-            </div>
+              <!-- Scrollable page content -->
+              <div id="registroContenedor" class="page-content" style="color: white;">
+                <form class="list" id="my-form" method="post">
+                  {{ form.hidden_tag() }}
+                      <ul>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Usuario</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="text" name="userid" placeholder="Digita tu usuario">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Nombre</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="text" name="username" placeholder="Digita tu nombre">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Apellidos</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="text" name="usersurname" placeholder="Digita tus apellidos">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Edad</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="text" name="edad" placeholder="Digita tu edad">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">E-mail</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="email" name="email" placeholder="E-mail">
+                              </div>
+                            </div>
+                          </div>
+                        </li> 
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Género</div>
+                              <div class="item-input-wrap">
+                                <div id="formulario-genero-seleccion">
+                                  <select name="gender" style="background-color: white">
+                                    <option  value="Masculino" selected>Masculino</option>
+                                    <option  value="Femenino">Femenino</option>
+                                  </select>
+                                </div>                                
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Contraseña</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="password" name="password" placeholder="Digita tu contraeña">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="formulario-letra" class="item-title item-label">Confirmar contraseña</div>
+                              <div class="item-input-wrap">
+                                <input style="background-color: white" type="password" name="password2" placeholder="Confirma tu contraeña">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <br>
+                        <br> 
+                        <li>
+                          <div >    
+                              <input  style="width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; bottom: 30px; color: black;" class="item-link list-button" type="submit" name="botEnviar" value="¡REGISTRAME!" />          
+                         </div>
+                        </li>                              
+                      </ul>
+                    </form>
+                    
+              </div>
+            
           </div>
-        </li>
-        <li class="accordion-item"><a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <div class="item-title">Item 2</div>
-            </div></a>
-          <div class="accordion-item-content">
-            <div class="block">
-              <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
-            </div>
-          </div>
-        </li>        
-      </ul>
-    </div>
+        </div>
+
+    
+
 
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="/static/lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="/static/js/my-app.js"></script>
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
   </body>
 </html>

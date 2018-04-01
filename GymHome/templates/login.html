@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <!-- Required meta tags-->
@@ -8,85 +9,65 @@
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
     <title>My App</title>
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-   <link rel="stylesheet" href="static/lib/framework7/css/framework7.ios.min.css">
-   <link rel="stylesheet" href="static/lib/framework7/css/framework7-icons.css">
-   <link rel="stylesheet" href="static/lib/framework7/css/framework7.ios.colors.min.css">
-
-   <link rel="stylesheet" href="static/css/styles.css">
-
-   <link rel="stylesheet" href="static/css/modificacion.css">
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
   </head>
-  <body>  
-    <!-- App root element -->
-    <div id="app">
-      <!-- Statusbar overlay -->
-      <div class="statusbar"></div>
+  <body>      
 
-      <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">
-        <!-- Initial Page, "data-name" contains page name -->
-        <div data-name="home" class="page">
-
-          <!-- Top Navbar -->
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="title">GymHome</div>
-            </div>
-          </div>
-
-          <!-- Scrollable page content -->
-          <div class="page-content alert">
-
-            <div data-page = "login-screen" class = "page no-navbar no-toolbar no-swipeback">
-               <br>
-               <br>
-   
-               <div class = "page-content login-screen-content">
-                  <div class = "login-screen-title">Iniciar seccion</div>
-                  
-                  <form method="post">
-                       {{ form.hidden_tag() }}
-                     <div class = "list-block">
-                        <ul>
-                           <li class = "item-content">
-                              <div class = "item-inner">
-                                 <div class = "item-title label">
-                                 {{ form.username.label }}</div>
-                                 <div class = "item-input">
-                                    <input type = "text" name = "username" placeholder = "Enter the username">
-                                 </div>
-                              </div>
-                           </li>
-                           
-                           <li class = "item-content">
-                              <div class = "item-inner">
-                                 <div class = "item-title label">
-                                 {{ form.password.label }}</div>
-                                 <div class = "item-input">
-                                    <input type = "password" name = "password" placeholder = "Enter the password">
-                                 </div>
-                              </div>
-                           </li>
-                        </ul>
-                     </div>
-                     
-                     <div class = "list-block">
-                       {{ form.submit() }}
-
-                     </div>
+    <!--LOGIN SCREEN-->
+        <div  class="login-screen modal-in">
+            <div class="view">
+              <div class="page">
+                <div id="loginContenedor" class="page-content login-screen-content">
+                  <div class="login-screen-title">
+                    <br>
+                    <img id="logoImagenLogin" src="../static/imagenes/GymHomeLogo2.png"/>
+                  </div>
+                  <form style="position: relative; top: -50px" method="post">
+                    {{ form.hidden_tag() }}
+                    <div class="list">
+                      <ul>
+                        <li class="item-content item-input">
+                          <div class="item-inner">
+                            <div style="color:white; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">USUARIO</div>
+                            <div class="item-input-wrap">
+                              <input style="background-color: white" type="text" name="username" placeholder="Digita tu usuario">
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input">
+                          <div class="item-inner">
+                            <div style="color:white; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">CONTRASEÑA</div>
+                            <div class="item-input-wrap">
+                              <input style="background-color: white" type="password" name="password" placeholder="Digita tu contraseña">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="list">
+                      <ul>
+                        <li> <input  style="width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white" class="item-link list-button" type="submit" name="botEnviar" value="Iniciar sección" /></li>
+                      </ul>
+                      <div class="block-footer">
+                        <p style="color:white; font-weight:bold;">¡Bienvenido a la familia GymHome!</p>
+                        <br>
+                        <p><a style="border: 2px solid white; border-radius: 15px; padding: 15px; background-color: white" class="external" href="{{ url_for('index') }}">Cerrar ventana</a></p>
+                      </div>
+                    </div>
                   </form>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <!--LOGIN SCREEN-->        
+
+
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="static/lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="static/js/my-app.js"></script>
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
   </body>
 </html>

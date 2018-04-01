@@ -12,8 +12,10 @@ var app = new Framework7({
   // Add default routes
   routes: [
     {
-      path: '/about/',
-      url: 'about.html',
+      path: '/login/',
+      url: '../login.html',
+      path: '/login2/',
+      url: '../login2.html',
     },
   ],
   // ... other parameters
@@ -23,6 +25,24 @@ var mainView = app.views.create('.view-main');
 
 var $$ = Dom7;
 
-$$('.open-login').on('click', function () {
-  myApp.loginScreen();
+
+
+$$('.login-screen').on('loginscreen:open', function (e, loginScreen) {
+  console.log('Login screen open')
 });
+$$('.login-screen').on('loginscreen:opened', function (e, loginScreen) {
+  console.log('Login screen opened')
+});
+$$('.login-screen').on('loginscreen:close', function (e, loginScreen) {
+  console.log('Login screen close')
+});
+$$('.login-screen').on('loginscreen:closed', function (e, loginScreen) {
+  console.log('Login screen closed')
+});
+
+
+
+
+
+
+

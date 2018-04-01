@@ -8,12 +8,14 @@ class LoginForm(FlaskForm):
     username = StringField('Nombre', validators=[DataRequired()])
     password = PasswordField('Contraseña', validators=[DataRequired()])
     remember_me = BooleanField('Recordarme')
-    submit = SubmitField('Ingresar')
+    submit = SubmitField('Iniciar sección')
 
 class RegistrationForm(FlaskForm):
+    userid=StringField('Usuario', validators=[DataRequired()])
     username = StringField('Nombre', validators=[DataRequired()])
     usersurname = StringField('Apellido', validators=[DataRequired()])
     edad = StringField('Edad', validators=[DataRequired()])
+    gender = StringField('Genero', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Contraseña', validators=[DataRequired()])
     password2 = PasswordField(

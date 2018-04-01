@@ -17,6 +17,8 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     print("hola2")
+    print(form.username.data)
+
     if form.validate_on_submit():
         print("hola3")
         user = User.query.filter_by(username=form.username.data).first()
@@ -35,8 +37,10 @@ def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = RegistrationForm()
+    print("hola3")
     if form.validate_on_submit():
-        user = User(username=form.username.data,usersurname=form.usersurname.data,edad=form.edad.data, email=form.email.data)
+        print("holasdsdsd3")
+        user = User(userid=form.userid.data,username=form.username.data,usersurname=form.usersurname.data,edad=form.edad.data, email=form.email.data,gender=form.gender.data)
         user.ingresar_contraseña(form.password.data)
         db.session.add(user)
         db.session.commit()

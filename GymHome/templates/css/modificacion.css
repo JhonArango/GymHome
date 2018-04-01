@@ -5,10 +5,6 @@ body{
 	background-size:cover;
 }
 
-#cuerpoReg{
-	background: url("../imagenes/back5.jpg");
-	background-size:cover;
-}
 #navbar{
 	font-size: 100%;
 	background: url("#");
@@ -43,7 +39,7 @@ body{
 #facebook{	
 	width: 20%;	
 	position: relative;
-	right:100px;
+	right:155px;
 }
 
 

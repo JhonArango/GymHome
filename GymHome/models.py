@@ -6,11 +6,13 @@ from GymHome import login
 
 class User(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    userid=db.Column(db.String(64), index=True, unique=True)
     username = db.Column(db.String(64), index=True, unique=True)
     usersurname = db.Column(db.String(64), index=True, unique=True)
     edad = db.Column(db.Integer, index=True, unique=True)
     Peso = db.Column(db.Integer, index=True, unique=True)
     Altura = db.Column(db.Integer, index=True, unique=True)
+    gender = db.Column(db.String(64), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     email = db.Column(db.String(120), index=True, unique=True)
     ejPecho=db.relationship('Pecho', backref='RutinaPe' , lazy='dynamic')
