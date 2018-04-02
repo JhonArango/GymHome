@@ -5,30 +5,42 @@ body{
 	background-size:cover;
 }
 
-#cuerpoReg{
-	background: url("../imagenes/back5.jpg");
-	background-size:cover;
-}
 #navbar{
 	font-size: 100%;
-	background: url("#");
+	background: url("../imagenes/back5-flip.jpg");
 	background-size:cover;
 	height: 10%;
 }
+
+#navbarInner{
+	width: 100%;
+}
+
+
 #registroBox{
-	margin-right: 12%;
+	width: 33%;
+	height: 100%;
 }
 
 #logoImagenBox{
 	height: 100%;
+	width: 33%;
+	margin: auto;
 }
 #logoImagen{
-	height: 100%;
+	height: 100%;	
+	margin: auto;
+}
+
+#loginBox{
+	width: 33%;
 	position: relative;
+	left: 15%;
 }
 
 #navbarRedes{
-	background-color: #062042;
+	background: url("../imagenes/back5-flip.jpg");
+	background-size:cover;
 	height: 3%;
 	margin-top: 3%;	
 }
@@ -43,7 +55,7 @@ body{
 #facebook{	
 	width: 20%;	
 	position: relative;
-	right:100px;
+	right:155px;
 }
 
 
@@ -106,7 +118,8 @@ body{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background-color: #062042;
+	background: url("../imagenes/back5-flip.jpg");
+	background-size:cover;
 }
 
 #dumbbellIcono{	
@@ -129,20 +142,211 @@ body{
 	height: 100%;
 }
 
+
 #loginContenedor{
-	background: url("../imagenes/back5.jpg");
+	background: url("../imagenes/back5-light.jpg");
 	background-size:cover;	
 }
 
 #logoImagenLogin{
-	height: 180px;
+	height: 150px;
 	position: relative;
-	top: -30px;
+	top: 0px;
 }
 
 #loginForm{
 	color: white;
 }
+
+#registroTitulo{
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;	
+}
+#registroContenedor{
+	background: url("../imagenes/back5.jpg");
+	background-size:cover;
+}
+
+#registroBoxPageRegistro{
+	margin-right: 13.5%;
+}
+
+
+.formulario-letra{
+	font-size: 15px;
+	color:white;
+}
+
+#formulario-genero-seleccion{
+	background-color: white;
+}
+
+
+#rutinaTitulo{
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+}
+
+
+.demo-card-header-pic .card-header {
+  height: 80vw;
+  background: url("../imagenes/rutinaImagen.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.demo-card-header-pic .card-content-padding .date{
+  color: #8e8e93;
+}
+
+
+
+.alimentacionTab{
+	position: relative;
+	bottom: 79px;
+	background-color: red;
+	width: 120%;	
+	position: relative;
+	right: 10%;
+}
+
+#comidaDelDia{
+  height: 80vw;
+  background: url("../imagenes/comidaDelDia.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+#carnes1{
+	height: 80vw;
+	background: url("../imagenes/carnes1.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#carnes2{
+	height: 80vw;
+	background: url("../imagenes/carnes2.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#carnes3{
+	height: 80vw;
+	background: url("../imagenes/carnes3.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+
+#verduras1{
+	height: 80vw;
+	background: url("../imagenes/verduras1.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#verduras2{
+	height: 80vw;
+	background: url("../imagenes/verduras2.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#verduras3{
+	height: 80vw;
+	background: url("../imagenes/verduras3.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#variado1{
+	height: 80vw;
+	background: url("../imagenes/variado1.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#variado2{
+	height: 80vw;
+	background: url("../imagenes/variado2.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#variado3{
+	height: 80vw;
+	background: url("../imagenes/variado3.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+
+#suplementacionImagen{
+	height: 80vw;
+	background: url("../imagenes/suplementacionImagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#proteina1Imagen{
+	height: 80vw;
+	background: url("../imagenes/proteina1Imagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#proteina2Imagen{
+	height: 80vw;
+	background: url("../imagenes/proteina2Imagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: right;
+}
+
+#pre-entrenoImagen{
+	height: 80vw;
+	background: url("../imagenes/pre-entrenosImagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: right;
+}
+
+#quemadoresImagen{
+	height: 80vw;
+	background: url("../imagenes/quemadoresImagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: right;
+
+}
+
+#creatinaImagen{
+	height: 80vw;
+	background: url("../imagenes/creatinaImagen.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: right;
+}
+
 
 
 

@@ -8,7 +8,7 @@
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>My App</title>
+    <title>GymHome</title>
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
@@ -20,7 +20,7 @@
             <div id="registroBox" class="left">
                 <a class="link external" href="{{url_for('register')}}">Registro</a>
             </div>
-            <div id="logoImagenBox" class="title" style="margin: auto;">
+            <div id="logoImagenBox" class="title" >
               <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
             </div>
             <div  class="right">
@@ -37,33 +37,42 @@
     <div class="row no-gap">
         <!-- Each "cell" has col-[widht in percents] class -->
         <div class="col-50">
-          <img id="ejercicios" src="../static/imagenes/ejercicios.jpg"/>
+          <a href="{{url_for('ejercicios')}}" class="external">
+            <img id="ejercicios" src="../static/imagenes/ejercicios.jpg"/>
+          </a>
         </div>
         <div class="col-50">
+          <a href="{{url_for('alimentacion')}}" class="external">
           <img id="alimentacion" src="../static/imagenes/alimentacion.jpg"/>
+          </a>
         </div>
     </div>
 
     <div class="row no-gap">
         <!-- Each "cell" has col-[widht in percents] class -->
         <div class="col-50">
-          <img id="suplementacion" src="../static/imagenes/suplementacion.jpg"/>
+          <a href="{{url_for('suplementacion')}}" class="external">
+            <img id="suplementacion" src="../static/imagenes/suplementacion.jpg"/>
+          </a>
         </div>
         <div class="col-50">
-          <img id="rutina" src="../static/imagenes/rutina.jpg"/>
+           <a href="{{url_for('rutina')}}" class="external">
+            <img id="rutina" src="../static/imagenes/rutina.jpg"/>
+          </a>
+
         </div>
     </div>
 
 
-    <div id="navbarRedes" class="toolbar" style="padding: 1.5em;">
+    <div id="navbarRedes" class="toolbar">
         <div class="toolbar-inner">
-            <a href="#" class="link ">
-              <img id="instagram" src="../static/imagenes/instagram.png"/>
+            <a href="https://www.instagram.com/wix/" class="link external">
+              <img id="instagram" src="../static/imagenes/instagram.jpg"/>
             </a>
-            <a href="#" class="link">
+            <a href="https://www.facebook.com/GymHome-386565771806947/" class="link external">
               <img id="facebook" src="../static/imagenes/facebook.png"/>
             </a>
-            <a href="#" class="link">
+            <a href="https://milo9402.wixsite.com/gymhome/informacion" class="link external">
               <img id="fitness" src="../static/imagenes/fitness.png"/>
             </a>
         </div>
@@ -72,19 +81,19 @@
 
     <div id="navbarBottom" class="toolbar toolbar-bottom-md">
         <div class="toolbar-inner">
-            <a href="#" class="link">
+            <a href="{{url_for('ejercicios')}}" class="link external">
               <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
             </a>
-            <a href="#" class="link">
+            <a href="{{url_for('alimentacion')}}" class="link external">
               <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
             </a>
-            <a href="#" class="link">
+            <a href="{{url_for('index')}}" class="link external">
               <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
             </a>
-            <a href="#" class="link">
+            <a href="{{url_for('suplementacion')}}" class="link external">
               <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
             </a>
-            <a href="#" class="link">
+            <a href="{{url_for('rutina')}}" class="link external">
               <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
             </a>
         </div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
+  </head>
+  <body>
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
+
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('alimentacion')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="#" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+
+                <div style="position: relative; top: 0px;" class="toolbar tabbar">
+                    <div class="toolbar-inner">
+                      <a href="#tab-1" class="tab-link">Pag 1</a>
+                      <a href="#tab-2" class="tab-link">Pag 2</a>
+                      <a href="#tab-3" class="tab-link">Pag 3</a>
+                    </div>
+                </div>
+
+
+                  <div style="width: 100%;  position: relative; bottom:150px;" class="tabs-animated-wrap">
+                    <div class="tabs">
+
+                      <div id="tab-1" class="page-content tab tab-active">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: black" id="verduras1" class="card-header align-items-flex-end">Flan bicolor de zanahoria y espinaca</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>
+                                ¿Sabes porque las zanahorias tiene su color naranja? Pues la razón está en la alta presencia de carotenos, en concreto el beta-caroteno o también conocido como pro-vitamina A. Estos compuestos químicos son muy beneficiosos para la piel, el sistema inmunológico y la salud ocular. <br><br> 
+
+                                Por su lado, el pigmento de las espinacas es por la clorofila, muy buena también para fortalecer el sistema inmunológico y el digestivo. Con estas dos verduras tan ricas y nutritivas hoy te invitamos a preparar un magnífico y colorido flan bicolor de zanahoria y espinaca. ¿Te apuntas?
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/flan-bicolor-de-zanahoria-y-espinaca/" class="link external">Leer mas</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="tab-2" class="page-content tab">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: green" id="verduras2" class="card-header align-items-flex-end">Canelones de espinacas a la catalana</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>
+                                ¡Los canelones son uno de los platos más creativos que hay! Variando el relleno que lleven puedes hacerlos de mil y uno sabores. Además, son un alimento muy agradecido ya que, con sus múltiples combinaciones, siempre podemos encontrar alguna que nos guste y, a la vez, crear nuevos tipos de canelones.  <br> <br>
+
+                                Los que te proponemos hoy son unos tradicionales canelones de espinacas a la catalana. Con su relleno de sofrito y frutos secos son ideales para que los niños coman espinacas. De hecho, ni se darán cuenta de que, en realidad, están comiendo verduras, ¡porque están riquísimos! ¿Quieres saber cómo preparar esta sencilla receta? ¡Te lo explicamos a continuación!
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/canelones-de-espinacas-a-la-catalana/" class="link external">Leer mas</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="tab-3" class="page-content tab">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: orange" id="verduras3" class="card-header align-items-flex-end">Lasaña a las espinacas con calabacín</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>Mmm... ¡Nos encantan las lasañas! Son un plato muy fácil de preparar que podemos hacer de mil y una formas distintas. Para ello, solamente tenemos que escoger y preparar el relleno, hidratar las placas, preparar la bechamel, montar la lasaña, ponerla al horno y... ¡listo! <br> <br>
+
+                              En esta ocasion hemos preparado una lasaña a las espinacas con calabacín, una receta rápida, sabrosa y muy fácil. ¿Puede haber algo mejor? Anímate a preparar esta receta y sorprende a toda la familia con un plato delicioso. Seguro que los niños dejan el plato limpio. ¡Que la disfrutéis
+                            </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/lasana-a-las-espinacas-con-calabacin/" class="link external">Leer mas</a>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>   
+
+
+
+
+                <div style="margin-top: 15%;" class="block">
+                  <!-- block content -->
+                </div>               
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                        </a>
+                    </div>
+                </div>   
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+  </body>
+</html>

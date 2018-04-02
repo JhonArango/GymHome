@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
+  </head>
+  <body>
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
+
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('alimentacion')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="#" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+
+                <div style="position: relative; top: 0px;" class="toolbar tabbar">
+                    <div class="toolbar-inner">
+                      <a href="#tab-1" class="tab-link">Pag 1</a>
+                      <a href="#tab-2" class="tab-link">Pag 2</a>
+                      <a href="#tab-3" class="tab-link">Pag 3</a>
+                    </div>
+                </div>
+
+
+                  <div style="width: 100%;  position: relative; bottom:150px;" class="tabs-animated-wrap">
+                    <div class="tabs">
+
+                      <div id="tab-1" class="page-content tab tab-active">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: white" id="variado1" class="card-header align-items-flex-end">Pastel de carne con queso de mahón</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>
+                                Los pasteles de carne son un entrante con mucha presencia y… ¡muy nutritivos! También puedes disfrutarlos como segundo plato, o añadir un poco de queso para tener listo en un momento un delicioso pastel de carne y queso para chuparse los dedos. <br><br>
+
+                                Aptos para toda la familia, alegrarán tu mesa en el día a día y, además, te harán quedar muy bien en las ocasiones de guardar. <br><br>
+
+                                Sírvelo como entrante acompañado de una ensalada, unos pepinillos en vinagre y una selección de mostazas. Sorprenderás a todos con este pastel frío. ¡Que aproveche!
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/pastel-de-carne-con-queso-de-mahon/">Leer mas</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="tab-2" class="page-content tab">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: black" id="variado2" class="card-header align-items-flex-end">Langostinos a la parrilla</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>
+                                Una reunión con amigos, en fin de semana, al aire libre y con buen tiempo no puede empezar mejor que con una barbacoa. Es una forma de cocer los alimentos sencilla, sin muchas complicaciones, y lo mejor es que el sabor es superior. Se puede hacer con los ingredientes que más os apetezcan como carnes o verduras, pero ¿y si le damos un punto de sofisticación y preparas estos langostinos a la parrilla? <br><br>
+
+                                Os van a encantar. La idea es montar brochetas con varios langostinos, hacerles un corte en el lomo para que se hagan mejor y untarlos con un aliño de aceite, lima, Avecrem, perejil y ajos. En dos minutos los tendréis listos.
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/langostinos-a-la-parrilla/">Leer mas</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="tab-3" class="page-content tab">
+                        <div class="block">
+                          <div style="width: 110%; position: relative; right: 8%" class="card demo-card-header-pic">
+                            <div style="color: black" id="variado3" class="card-header align-items-flex-end">Macarrones gratinados</div>
+                            <div class="card-content card-content-padding">
+                              <p class="date">Publicado en Abril 1, 2018</p>
+                              <p>
+                                Probablemente, este es el plato estrella de los menús infantiles. Pero eso no significa que no pueda ser un plato excelente. ¿Sabes qué es lo que marca la diferencia? Cuidar todos los pequeños detalles. <br><br>
+
+                                Un buen sofrito y un buen queso son la base de este plato. Junto a, claro está, una pasta de calidad. <br><br>
+
+                                ¡Ah! Y no nos escondamos. Aunque nuestra infancia haya quedado un poco lejos, ¿a quién no le gustan unos macarrones gratinados?
+                            </p>
+                            </div>
+                            <div class="card-footer">
+                              <a href="https://www.gallinablanca.es/receta/macarrones-gratinados/" class="link external">Leer mas</a>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>   
+
+
+
+
+                <div style="margin-top: 15%;" class="block">
+                  <!-- block content -->
+                </div>               
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                        </a>
+                    </div>
+                </div>   
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+  </body>
+</html>

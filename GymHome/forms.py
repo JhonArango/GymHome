@@ -10,6 +10,16 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Recordarme')
     submit = SubmitField('Iniciar sección')
 
+class RutinaForm(FlaskForm):
+    tipoEjercicio = StringField('tipoejErcicio', validators=[DataRequired()])
+    semana = StringField('Semana', validators=[DataRequired()])
+    series = StringField('Series', validators=[DataRequired()])
+    repeticiones = StringField('Repeticiones', validators=[DataRequired()])
+    peso = StringField('Peso', validators=[DataRequired()])
+    descanso = StringField('Descanso', validators=[DataRequired()])   
+    submit = SubmitField('Iniciar sección')
+
+
 class RegistrationForm(FlaskForm):
     userid=StringField('Usuario', validators=[DataRequired()])
     username = StringField('Nombre', validators=[DataRequired()])
