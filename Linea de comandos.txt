@@ -47,6 +47,8 @@ flask db migrate -m "users table"
 Funcion interna de el script migracion que actualiza los cambios en la base de datos
 flask db upgrade
 
+Flask funciones de login y autentificacion de usuario
+pip install flask-login
 =========================================================
 Impedir que un usuario entre a una pagina sin autentificacion
 
