@@ -10,6 +10,12 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Recordarme')
     submit = SubmitField('Iniciar sección')
 
+
+class dataForm(FlaskForm):
+    dato = StringField('Dato')
+    ejercicio = StringField('Ejercicio')
+    submit = SubmitField('Iniciar sección')
+
 class RutinaForm(FlaskForm):
     tipoEjercicio = StringField('tipoejErcicio', validators=[DataRequired()])
     semana = StringField('Semana', validators=[DataRequired()])
@@ -18,6 +24,7 @@ class RutinaForm(FlaskForm):
     peso = StringField('Peso', validators=[DataRequired()])
     descanso = StringField('Descanso', validators=[DataRequired()])   
     submit = SubmitField('Iniciar sección')
+
 
 
 class RegistrationForm(FlaskForm):

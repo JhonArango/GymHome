@@ -52,28 +52,159 @@
                   <img id="rutinaTitulo" src="../static/imagenes/historial.png"/>
                 </div>
                 <div class="block">
-                  <div style="background-color: white" class="list simple-list">
-                    <ul>
-                      <li style="background-color: #DCDCDC">
-                        <select name="tipoEjercicio">
-                          <option  value="Pecho" selected>Pecho</option>
-                          <option  value="Hombro">Hombro</option>
-                          <option  value="Biceps">Biceps</option>
-                          <option  value="Triceps">Triceps</option>
-                          <option  value="Cuadriceps">Cuadriceps</option>
-                          <option  value="Femoral">Femoral</option>
-                          <option  value="Pantorrilla">Pantorrilla</option>     
-                        </select> 
-                      </li>
-                      {% if name == 'Pecho'%}
-                      hola
-                      {%endif%}
-                      <li>Semana: {codigo backend}</li>
-                      <li>Series: {codigo backend}</li>
-                      <li>Repeticiones: {codigo backend}</li>
-                      <li>Peso: {codigo backend}</li>
-                      <li>Descanso: {codigo backend}</li>
-                    </ul>
+                 <div class="list accordion-list" style="color: white;">
+                      <ul>
+                          <li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Pecho</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Pe %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Pecho'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li>
+                          <li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Hombro</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Ho %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Hombro'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li>
+                          <li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Biceps</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Bi %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Biceps'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li><li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Triceps</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Tr %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Triceps'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li><li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Cuadriceps</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Cu %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Cuadriceps'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li><li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Femoral</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Fe %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Femoral'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li><li class="accordion-item">
+                              <a href="" class="item-link item-content">
+                                  <div class="item-inner">
+                                      <div class="item-title">Pantorrilla</div>
+                                  </div>
+                              </a>
+                              
+                                <div class="accordion-item-content" style="text-align: center; ">
+                                  Semana
+                                  {% for p in Pa %}
+                                  <form action="" method="post">
+                                    {{ form.hidden_tag() }}
+                                    <br>
+                                    <input  type="hidden" name='ejercicio' value='Pantorrilla'>
+                                    <input  type="hidden" name='dato' value={{p.semana}}>
+                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <br>
+                                  </form>
+                                  {%endfor%}
+                                  
+                                </div>
+                          </li>
+                      </ul>
                   </div>
                 </div>
                 <div style="margin-top: 25%;" class="block">

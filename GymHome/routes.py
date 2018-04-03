@@ -1,6 +1,6 @@
 from flask import render_template,flash,redirect,url_for,request
 from GymHome import GymHome,db
-from GymHome.forms import LoginForm,RegistrationForm,RutinaForm
+from GymHome.forms import LoginForm,RegistrationForm,RutinaForm,dataForm
 from flask_login import current_user, login_user,logout_user,login_required
 from GymHome.models import User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femoral,Pantorrilla,Hombro
 from werkzeug.urls import url_parse
@@ -80,8 +80,37 @@ def rutina():
 
 @GymHome.route('/listarRutina', methods=['GET', 'POST'])
 def listarRutina():
-    u = User.query.filter_by(username=current_user.username).first()   
-    return render_template('listarRutina.html', title='menu',u=u)
+    u = User.query.filter_by(username=current_user.username).first()
+    Pe = u.ejPecho.all()  
+    Ho = u.ejHombro.all() 
+    Bi = u.ejBiceps.all() 
+    Tr = u.ejTriceps.all() 
+    Cu = u.ejCuadriceps.all() 
+    Fe = u.ejFemoral.all() 
+    Pa = u.ejPantorrilla.all() 
+    form = dataForm()
+    print(form.dato.data)
+    print(form.ejercicio.data)
+    print("hola3")
+    if form.validate_on_submit():
+        u = User.query.filter_by(username=current_user.username).first()
+        if(form.ejercicio.data == 'Pecho'):
+            s = Pecho.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Hombro'):
+            s = Hombro.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Biceps'):
+            s = Biceps.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Triceps'):
+            s = Triceps.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Cuadriceps'):
+            s = Cuadriceps.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Femoral'):
+            s = Femoral.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        if(form.ejercicio.data == 'Pantorrilla'):
+            s = Pantorrilla.query.filter_by(semana=form.dato.data,user_id=u.id).first()
+        return render_template('lista.html', title='lista',sem = form.dato.data , TipoE = form.ejercicio.data, s=s)
+    return render_template('listarRutina.html', title='listarRutina', form=form, Pe =Pe,Ho=Ho,Bi=Bi,Tr=Tr,Cu=Cu,Fe=Fe,Pa=Pa)
+
 
 @GymHome.route('/ejercicios')
 def ejercicios():
@@ -127,6 +156,9 @@ def variado():
 def verduras():
     return render_template('verduras.html', title='menu')
 
+@GymHome.route('/lista')
+def lista():
+    return render_template('lista.html', title='menu')
 
 @GymHome.route('/logout')
 def logout():
