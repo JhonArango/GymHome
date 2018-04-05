@@ -5,7 +5,7 @@ from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from GymHome.models import User
 
 class LoginForm(FlaskForm):
-    username = StringField('Nombre', validators=[DataRequired()])
+    userid = StringField('Usuario', validators=[DataRequired()])
     password = PasswordField('Contraseña', validators=[DataRequired()])
     remember_me = BooleanField('Recordarme')
     submit = SubmitField('Iniciar sección')
@@ -14,6 +14,7 @@ class LoginForm(FlaskForm):
 class dataForm(FlaskForm):
     dato = StringField('Dato')
     ejercicio = StringField('Ejercicio')
+    nombree = StringField('nombree')
     submit = SubmitField('Iniciar sección')
 
 class RutinaForm(FlaskForm):
@@ -39,8 +40,8 @@ class RegistrationForm(FlaskForm):
         'Repetir Contraseña', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Registrar')
 
-    def Validar_nombreUsuario(self, username):
-        user = User.query.filter_by(username=username.data).first()
+    def Validar_userid(self, username):
+        user = User.query.filter_by(userid=userid.data).first()
         if user is not None:
             raise ValidationError('Por favor ingrese un usuario diferente.')
 

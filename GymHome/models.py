@@ -33,6 +33,7 @@ class User(UserMixin,db.Model):
 
 class Pecho(db.Model):
     idPe = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -42,6 +43,7 @@ class Pecho(db.Model):
 
 class Hombro(db.Model):
     idHo = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -51,6 +53,7 @@ class Hombro(db.Model):
 
 class Biceps(db.Model):
     idBi = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -60,6 +63,7 @@ class Biceps(db.Model):
 
 class Triceps(db.Model):
     idTr = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -69,6 +73,7 @@ class Triceps(db.Model):
 
 class Cuadriceps(db.Model):
     idCu = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -78,6 +83,7 @@ class Cuadriceps(db.Model):
 
 class Femoral(db.Model):
     idFe = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)
@@ -87,6 +93,7 @@ class Femoral(db.Model):
 
 class Pantorrilla(db.Model):
     idPa = db.Column(db.Integer, primary_key=True)
+    nombreEjer = db.Column(db.String(64), index=True)
     semana = db.Column(db.Integer, index=True)
     series = db.Column(db.Integer, index=True)
     repeticiones = db.Column(db.Integer, index=True)

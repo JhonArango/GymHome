@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
+  </head>
+  <body>
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
+
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
+
+
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('suplementacion')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                <div style="margin-top: 0px;" class="list accordion-list">
+                    <ul style="background-color: white">
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">100% Whey Gold Standard</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina2Imagen.jpg"/>
+                              <p>
+                                100% whey gold standard Pertenece a la tercera generación de proteínas de suero 100% de la prestigiosa marca Optimum Nutrition. <br><br>
+
+
+
+                                Contiene una mezcla exclusiva de: <br><br>
+
+                                    Concentrado de Proteína de Suero Ultrafiltrada
+                                    Aislado de Proteína de Suero Microfiltrada.
+                                    Aislado de Proteína de Suero por Intercambio Iónico. <br><br>
+
+                                 
+
+                                Es una proteína de suero pura, inalterada, con menos cantidad de grasas, colesterol, lactosa y otros carbohidratos con cada servicio. Este suplemento de proteína de suero no es una excepción. De hecho, 100% Whey Gold Standard es mejor que nunca, ya que: <br><br>
+
+                                 
+
+                                    Te proporciona más cantidad de Aislado de Proteína de Suero, la más pura y cara fuente de Proteína de Suero disponible.
+                                    Mayor porcentaje de proteína. 100% Whey Gold Standard siempre ha sido un referente en este aspecto. Ahora con 24 gramos de proteína por servicio, un 79% de proteína.
+                                    Han incluido más HydroWhey, Péptidos de Suero hidrolizados de bajo peso molecular que hacen que 100% Whey Gold Standard actué incluso más rápido en tu organismo.
+                                    Ahora contiene Lactasa y enzimas digestivas para aumentar la absorción y hacer este producto más apto para los individuos que no toleran la lactosa.
+                                    Más de 4 gramos de Glutamina y precursores de Glutamina junto con 5 gramos de BCAAs (Leucina, Isoleucina y Valina) en cada servicio.
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Mass Tech</div>
+                                </div>
+                            </a>
+                            <div  style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina1Imagen.jpg"/>
+                              <p>
+                                Ganador de Masa Muscular Avanzado <br><br>
+
+                                El nuevo Mass Tech Performance Series es un ganador de masa muscular avanzado diseñado para cualquier persona que le resulte difícil aumentar su tamaño o para aquellos que quieren ganar más fuerza y potencia muscular. Potenciado con 80 gramos de proteína y 1170 calorías de producción masiva (al mezclarlos con 2 tazas de leche desnatada) esta potente fórmula se ve mejorada notablemente con probados conductores anabólicos para el rápido aumento de masa y fuerza muscular! <br><br>
+
+                                 
+
+                                LOS HECHOS NO MIENTEN<br><br>
+
+                                Calorías de la mejor calidad diseñadas para ganar masa muscular<br><br>
+
+                                Mass Tech Performance Series es el ganador de peso más versátil disponible en el mercado que se puede tomar una vez al día o dividida en dos porciones para consumirlas por separado. La fórmula nueva y potente ofrece ahora una masiva porción de 1.170 calorías derivadas de proteínas de alta calidad y carbohidratos de rápida asimilación, así como de grasas saludables.<br><br>
+
+                                Más proteína por servicio que otros ganadores de peso<br><br>
+
+                                La nueva y mejorada fórmula cuenta con 80g de un Sistema Multi-fase de Proteínas que suministra proteínas de rápida, media y lenta digestión. Este sistema de proteínas multi-fase proporciona los aminoácidos esenciales para el cuerpo a diferentes velocidades de liberación, manteniendo un flujo constante y prolongado de aminoácidos en sangre.<br><br>
+
+                                Más BCAA y L-leucina por servicio que otros ganadores de peso<br><br>
+
+                                La dosis de la fórmula de proteína cuando se mezcla con 2 tazas de leche desnatada proporciona una enorme porción de 7g de L-leucina y 13g de BCAAs, estos ayudan a alimentar sus músculos, a preservar las reservas de glucógeno muscular y a reducir la degradación de las proteínas.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Animal Whey</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina3Imagen.jpg"/>
+
+                              <p>
+                                En el mercado de la suplementación proteica, podemos encontrar un amplio catálogo de productos, diseñados para aportar una serie de beneficios notables a los consumidores, en base a diferentes ingredientes y compuestos para cada marca. Esta vez se ha unido a la competencia Animal Whey, un suplemento que, aprovechando la popularidad de la línea compañía, tales como Animal Pak y Animal Cuts, ha llegado para hacerse un hueco en el mercado, esperando una gran aceptación, tal y como ha sucedido con los otros suplementos de la marca. <br><br>  
+
+                                Composición<br><br>
+
+                                Animal Whey está hecho a base de dos formas de proteína de suero junto con concentrado, además de otros ingredientes como:<br><br>
+
+                                    Enzimas digestivas: papaína y bromelina que aceleran la absorción <br> proteica <br>
+                                    Lecticina <br>
+                                    Goma celulosa y goma xantana <br>
+                                    Acesulfamo potásico <br>
+                                    Sucralosa <br><br>
+
+                                Siguiendo la tendencia creada por la industria, este producto no contiene aminoácidos añadidos, tal vez para evitar las sospechas de amino spking, que viene a ser el principal diferenciador de una buena proteína y no sólo el conjunto de aminoácidos “baratos”.
+                                Características<br><br>
+
+                                    Añadido de enzima de rápida digestión para mejorar la abosorción de las proteínas y la digestión.
+                                    Añadido con proteína de suero de alta calidad.
+                                    Suplementa las extremas necesidades proteicas para los levantadores de pesas más dedicados.
+                                    No contiene gluten.
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">BeOne Isolate GMN</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina4Imagen.jpg"/>
+
+                              <p>
+                                  BeOne Isolate GMN <br><br>
+
+                                  BEONE es una proteína de suero aislada de alta pureza, rápida y avanzada que ha desarrollado GMN, sus componentes apoyan la construcción de masa muscular, protegen los músculos y ayudan a recuperar de forma rápida. Puedes tomar un scoop que aporta 24 g de proteína, o dos scoop que aportan 48 g de proteína. Con sabores deliciosos de vainilla y chocolate.
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">BiPro</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina5Imagen.jpg"/>
+
+                              <p>
+                                  Bipro es la última tecnología en aislado de proteína de suero, pura y natural para atletas e individuos que desean construir o mantener su masa corporal. A diferencia de los demás productos, Bipro no contiene ninguna mezcla de proteínas o ingredientes no deseados purificados a traves de un proceso de intercambio ionico selectivo, Bipro contiene todos los aminoácidos esenciales, rico en aminoácidos de cadena ramificada (BCAAS) que se metabolizan directamente y son absorbidos con rapidez por el tejido muscular, sin el aislado de la proteína del suero de leche original. La única opción para atletas serios y rigurosos. <br><br>
+
+                                  Bipro, proteína aislada del suero es la proteína mas activa biológicamente disponible Bipro es una proteína naturalmente completa con todos los aminoácidos esenciales requeridos diariamente por el cuerpo para mantener saludables las estructuras corporales. Bipro es rico en aminoácidos de cadena ramificada, lendina, isoleusma y vainilla, los cuales suplen a los atletas con importantes nutrientes después del entrenamiento para fortalecer, construir y reparar sus musculos. Bipro es rápidamente adsorbido, manteniendo un balance positivo de nitrógeno y creando un ambiente anabólico propicio para la síntesis proteína del musculo.
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">CANNIBAL SUPER MASS BEEF</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina6Imagen.jpg"/>
+
+                              <p>
+                                  CANNIBAL SUPER MASS BEEF <br><br> 
+
+                                  Cannibal es la proteína de carne de alta tecnología combinada con los mejores carbohidratos y aminoácidos para aumentar masa y musculo. Cannibal te ofrece 65 gramos de la mejor proteína de carne, contiene carbohidratos de fácil asimilación que le proporciona a tu cuerpo energía rápida y no se almacena como deposito de grasas. Cannibal te entrega la nutrición que necesita tu cuerpo.<br><br> 
+
+                                  ¡RECARGATE CON COMBUSTIBLE ADICIONAL PARA TU CUERPO!<br><br> 
+
+                                  Cada porción de Cannibal entrega 8 gramos de estupendos aminoácidos (BCAA’S) de rápida absorción, las cuales son agotados durante el entrenamiento duro y actúan directamente en los músculos para ayudar a promover la capacidad de la proteína y velocidad de recuperación. Te proporciona más de 2 gramos de GLUTAMIN
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Carnivor</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina7Imagen.jpg"/>
+
+                              <p>
+                                  Es el primer aislado en polvo de proteína de carne <br><br>
+
+                                  Desde hace tiempo se sabe que los culturistas y atletas de fuerza consumen grandes cantidades de carne de vacuno para ayudar a construir músculo y aumentar su fuerza. El poder de la construcción muscular de la carne de vacuno no puede negarse. Pregunte a cualquier culturista y ellos le dirán que hacen sus mayores ganancias musculares y sentir su fuerte cuando comen carne de vacuno. Ahora, gracias al desarrollo de una avanzada proteína de carne vacuna dónde se ha puesto toda la bioingeniería en el asador esto es posible.<br><br>
+
+                                  ¡MuscleMeds  ha formulado lo más buscado! Carnivor es diferente a cualquier otra proteína existente. Es el primer aíslado de proteína del mundo más concentrado que el suero.<br><br>
+
+                                  A través de unos cmoplejos procesos de extración, clarificación, hidrólisis y aislado la proteína pura de carne de Carnivor se entrega a los tejidos musculares para construir músculo, para sentir el poder de la carne con más aminoácidos que cualquier otra fuente protéica usada en suplementos, incluidos: aislado de leche, soja, leche o huevo. Carnivor es un 350% más concentrada que cualquier otra fórmula y más efectiva en la construcción muscular, ¡más que un filete de solomillo!
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">CROSSWHEY COMPLEX</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/proteina8Imagen.jpg"/>
+
+                              <p>
+                                  
+                                  TNT CROSSWHEY COMPLEX <br><br>
+
+                                  CROSSWHEY COMPLEX es un complemento nutricional deportivo para atletas que buscan reflejar en su apariencia las horas de dedicación y ejercicio, contribuye a aumentar talla muscular. CROSSWHEY COMPLEX te proporciona 480 calorias en una porción de 120 gramos, de los cuales 30 gramos sin pura proteina de la leche de altísima disponibilidad, 82 gramos de carbohidratos que son pura energía. Cero azucar y 5 gramos de mezcla  lista de glutamina y 3 gramos de cratina que te dan el soporte. <br><br>
+
+                                  No contiene sodio y es bajo en grasa.
+
+
+                              </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div style="margin-top: 60px;" class="block">
+                  <!-- block content -->
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+  </body>
+</html>

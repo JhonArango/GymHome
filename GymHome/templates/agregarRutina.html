@@ -36,7 +36,7 @@
                           </a>
                       </div>
                       <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="#" class="link external">
+                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
                           <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
                         </a>
                       </div>
@@ -61,13 +61,38 @@
                             <div class="item-input-wrap">
                               <div id="formulario-genero-seleccion">
                                 <select name="tipoEjercicio">
-                                  <option  value="Pecho" selected>Pecho</option>
-                                  <option  value="Hombro">Hombro</option>
-                                  <option  value="Biceps">Biceps</option>
-                                  <option  value="Triceps">Triceps</option>
-                                  <option  value="Cuadriceps">Cuadriceps</option>
-                                  <option  value="Femoral">Femoral</option>
-                                  <option  value="Pantorrilla">Pantorrilla</option>     
+                                  <optgroup label="Pecho">
+                                    <option  value="Pecho1" selected>Barbell Bench Press-Medium Grip</option>
+                                    <option  value="Pecho2">Barbell Incline Bench Press Medium-Grip</option>
+                                    <option  value="Pecho3">Decline Barbell Bench Press</option>
+                                  </optgroup>
+                                  <optgroup label="Hombro">
+                                    <option  value="Hombro1">Side Lateral Raise</option>
+                                    <option  value="Hombro2">Standing Military Press</option>
+                                    <option  value="Hombro3">Barbell Shoulder Press</option>
+                                    <option  value="Hombro4">Dumbbell Shoulder Press</option>
+                                  </optgroup>
+                                  <optgroup label="Biceps">
+                                    <option  value="Biceps1">Dumbbell Bicep Curl</option>
+                                    <option  value="Biceps2">Seated Dumbbell Curl</option>
+                                    <option  value="Biceps3">Standing Biceps Cable Curl</option>
+                                    <option  value="Biceps4">EZ-Bar Skullcrusher</option>
+                                  </optgroup>
+                                  <optgroup label="Cuadriceps">
+                                    <option  value="Cuadriceps1">Leg Press</option>
+                                    <option  value="Cuadriceps2">Leg Extensions</option>
+                                    <option  value="Cuadriceps3">Barbell Squat</option>
+                                    <option  value="Cuadriceps4">Single-Leg Press</option>
+                                  </optgroup>
+                                  <optgroup label="Femoral">
+                                    <option  value="Femoral1">Lying Leg Curls</option>
+                                    <option  value="Femoral2">Romanian Dead Lift</option>
+                                    <option  value="Femoral3">Deadlift</option>
+                                  </optgroup>
+                                  <optgroup label="Pantorrilla">
+                                    <option  value="Pantorrilla1">Standing Calf Raises</option>
+                                    <option  value="Pantorrilla2">Seated Calf Raise</option>
+                                  </optgroup>
                                 </select>
                               </div>                                
                             </div>
@@ -126,7 +151,7 @@
                       </li>                                                    
                     </ul>
                     <div class="block">                      
-                    <input style="height:40px; width: 50%; margin-left: 25%; margin-top: 10%; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; bottom: 30px; " class="item-link list-button" type="submit" name="botEnviar" value="¡AGREGAR RUTINA!"/>
+                    <input style="height:40px; width: 70%; margin-left: 15%; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; bottom: 10px; " class="item-link list-button" type="submit" name="botEnviar" value="¡AGREGAR RUTINA!"/>
                      </div>
                   </form>
                 </div>

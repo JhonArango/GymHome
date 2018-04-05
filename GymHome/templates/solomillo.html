@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
+  </head>
+  <body>
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
+
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('alimentacion')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                <div style="margin-top: 0px;" class="list accordion-list">
+                    <ul style="background-color: white">
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Solomillo a las cuatro pimientas</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo1.jpg"/>
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo1-receta.jpg"/>
+                              <p>
+                                <span style="font-weight: bolder;">Paso 1</span><br>
+                                Limpia el solomillo de nervios y grasa. Sazónalo con una pastilla de Avecrem Dúo Guisos de Carne. Dóralo al fuego con un poco de aceite de oliva
+                              </p>
+                              <p>                                  
+                                <span style="font-weight: bolder;">Paso 2</span><br>
+                                Retira la carne y reserva al calor, desglasa (raspar para retirar lo que queda pegado en el fondo) la sartén con el Jerez y despega bien los restos de carne.
+                              </p>
+                              <p>                                
+                                <span style="font-weight: bolder;">Paso 3</span><br>
+                                Añade el Caldo Casero de Carne 100% Natural Gallina Blanca y la harina de maíz diluida en un poco de agua fría. Después, cuécelo hasta que espese. Pásalo por el chino y añade la crema de leche y las pimientas de colores (al gusto), deja cocer 5 min. Sirve el solomillo bañado con la salsa.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Solomillo agridulce</div>
+                                </div>
+                            </a>
+                            <div  style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo2.jpg"/>
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo2-receta.jpg"/>
+                              <p>
+                                <span style="font-weight: bolder;">Paso 1</span><br>
+                                Saltea el sofrito de hortalizas y añade el Tomate Frito Gallina Blanca para que se unan los sabores. Condimenta los solomillos con el Avecrem y la pimienta y envuélvelos con el bacón. O bien los puedes abrir y rellenar con el bacón y atarlos con hilo de cocina.
+                              </p>
+                              <p>                                  
+                                <span style="font-weight: bolder;">Paso 2</span><br>
+                                Coloca los solomillos en una fuente de horno con las hortalizas como base y ásalos a 200 °C. unos 10 minutos. Saca y riega con el Caldo Casero de Carne 100% Natural.
+                              </p>
+                              <p>                                
+                                <span style="font-weight: bolder;">Paso 3</span><br>
+                                SALSA: Haz un caramelo con el azúcar y el vinagre. Añade el licor de naranja y deja evaporar. Vierte sobre los solomillos y termina de cocer unos 12-15 minutos según tamaño de los solomillos. Pasa la salsa por el chino y sírvelo caliente.
+                              </p>
+                              <p>                                
+                                <span style="font-weight: bolder;">Paso 4</span><br>
+                                Acompaña los solomillos con flanes de manzana. Para elaborarlos untar unos moldes para microondas con un poco de mantequilla y espolvoréalos de azúcar. Pon capas de láminas de manzana alternando con mantequilla y azúcar y espolvorea con pimienta hasta llenar el molde. Cocínalos en el microondas durante 3 minutos a máxima potencia.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Solomillo de cerdo con castañas</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo3.jpg"/>
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/alimentacion/Carnes/Solomillo/solomillo3-receta.jpg"/>
+                              <p>
+                                <span style="font-weight: bolder;">Paso 1</span><br>
+                                Practica un corte a las castañas y ponlas a hervir en agua. Cuando estén cocidas pélalas y resérvalas.
+                              </p>
+                              <p>                                  
+                                <span style="font-weight: bolder;">Paso 2</span><br>
+                                Salpimienta los solomillos y añádelos en una cazuela con las hierbas. Deja rustir a fuego vivo.
+                              </p>
+                              <p>                                
+                                <span style="font-weight: bolder;">Paso 3</span><br>
+                                Mientras, pela y corta a trozos regulares los ajos, la cebolla y los tomates. Añádelos a la cazuela por este orden.
+                              </p>
+                              <p>                                
+                                <span style="font-weight: bolder;">Paso 4</span><br>
+                                Cuando estén las verduras un poco cocinadas, añade un chorro de brandy, deja reducir el alcohol. Agrega las castañas, cubre con el agua, añade la pastilla de Avecrem y deja cocer hasta que las castañas estén blandas. Apaga el fuego. Reduce la salsa si fuera necesario. Sirve la carne cortada a lonchas con la salsa y las castañas como guarnición.
+                              </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 15%;" class="block">
+                  <!-- block content -->
+                </div>               
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                        </a>
+                    </div>
+                </div>   
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+    <script type="text/javascript">
+      var swiper = app.swiper.create('.swiper-container', {
+          speed: 400,
+          spaceBetween: 100
+      });
+    </script>
+  </body>
+</html>

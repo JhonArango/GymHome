@@ -23,7 +23,7 @@
           <!-- Your main view, should have "view-main" class -->
           <div class="view view-main">
             <!-- Initial Page, "data-name" contains page name -->
-            
+            <div data-name="home" class="page">
               <div id="registroContenedor" class="page-content">
 
                 <div id="navbar" class="navbar">
@@ -34,7 +34,7 @@
                           </a>
                       </div>
                       <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="#" class="link external">
+                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
                           <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
                         </a>
                       </div>
@@ -45,7 +45,7 @@
                 </div>
 
                 <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
-                <div style="width: 100%; position: relative; right: 2.5%; margin-top: 0px;" class="card demo-card-header-pic">
+                <div style="width: 100%; position: relative; right: 2.5%; margin-top: 0px; margin-bottom: 30px;" class="card demo-card-header-pic">
                   <div id="comidaDelDia" class="card-header align-items-flex-end">Fideuá rápida</div>
                   <div class="card-content card-content-padding">
                     <p class="date">Plato del día</p>
@@ -55,14 +55,104 @@
                     <a href="https://www.gallinablanca.es/receta/fideua-rapida/" class="link external">Leer mas</a>
                   </div>
                 </div>
+                  
 
-                <div class="list links-list">
-                  <ul style="background-color: white">
-                    <li><a href="{{url_for('carnes')}}" class="link external">CARNES</a></li>
-                    <li><a href="{{url_for('verduras')}}" class="link external">VERDURAS</a></li>
-                    <li><a href="{{url_for('variado')}}" class="link external">VARIADO</a></li>
-                  </ul>
+
+                <div style="width: 80%; margin-left: 10%;" class="alimentacionTitulos">CARNES</div>
+                <div style="width: 80%;margin-bottom: 10px; position: relative; left: 10%" data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                  <div style="background-color: white;  position: absolute; bottom: 0px;" class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="{{url_for('solomillo')}}" class="link external">
+                        <img class="carnesSwiper" src="../static/imagenes/alimentacion/solomilloPresentacion.jpg"/>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/conejoPresentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/terneraPresentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/albondigasPresentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/solomillodecerdoPresentacion.jpg"/></a>
+                    </div>
+                  </div>
                 </div>
+
+
+                <div style="width: 80%; margin-left: 10%;" class="alimentacionTitulos">VERDURAS</div>
+                <div style="width: 80%;margin-bottom: 10px; position: relative; left: 10%" data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                  <div style="background-color: white;  position: absolute; bottom: 0px;" class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="link external">
+                        <img class="carnesSwiper" src="../static/imagenes/alimentacion/alcachofa-presentacion.jpg"/>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/cebolla-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/coliflor-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/esparragos-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/espinacas-presentacion.jpg"/></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div style="width: 80%; margin-left: 10%;" class="alimentacionTitulos">PASTAS</div>
+                <div style="width: 80%;margin-bottom: 10px; position: relative; left: 10%" data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                  <div style="background-color: white;  position: absolute; bottom: 0px;" class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="link external">
+                        <img class="carnesSwiper" src="../static/imagenes/alimentacion/lasana-presentacion.jpg"/>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/espaguetis-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/fideua-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/macarrones-presentacion.jpg"/></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 80%; margin-left: 10%;" class="alimentacionTitulos">SOPAS</div>
+                <div style="width: 80%;margin-bottom: 10px; position: relative; left: 10%" data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                  <div style="background-color: white;  position: absolute; bottom: 0px;" class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="" class="link external">
+                        <img class="carnesSwiper" src="../static/imagenes/alimentacion/sopaPescado-presentacion.jpg"/>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/sopaAjo-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/sopaCebolla2-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/sopaMarisco-presentacion.jpg"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="" class="link external"><img class="carnesSwiper" src="../static/imagenes/alimentacion/sopaPollo-presentacion.jpg"/></a>
+                    </div>
+                  </div>
+                </div>               
+
 
 
                 <div style="margin-top: 15%;" class="block">
@@ -90,9 +180,9 @@
                           <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
                         </a>
                     </div>
-                </div>   
+                </div>
               </div>
-            
+            </div>
           </div>
         </div>   
 
@@ -101,5 +191,6 @@
     <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="../static/js/my-app.js"></script>
+
   </body>
 </html>

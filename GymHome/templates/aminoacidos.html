@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/modificacion.css">
+  </head>
+  <body>
+    <!-- App root element -->
+        <div id="app">
+          <!-- Statusbar overlay -->
+          <div class="statusbar"></div>
+
+          <!-- Your main view, should have "view-main" class -->
+          <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
+
+
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('suplementacion')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                <div style="margin-top: 0px;" class="list accordion-list">
+                    <ul style="background-color: white">
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">BPI</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen.jpg"/>
+                              <p>
+                                BPI Sports ha vuelto a redefinir una nueva clase de suplementos para quemar las grasas y lograr una muy buena definición muscular, gracias a la nueva formulación de B4. Su nueva formulación con DendroMAX se ha centrado en quemar las grasas en forma efectiva, y evitar que las grasas vuelvan a almacenarse en las zonas en donde estas fueron removidas o movilizadas, junto con entregar mucha energía y concentración para potenciar cada uno de los entrenamientos.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Amino 100 Beta-Force</div>
+                                </div>
+                            </a>
+                            <div  style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen2.jpg"/>
+                              <p>
+                                Amino 100 Beta-Force es la perfecta mezla de los mejores aminoacidos de cadena ramificada que se conoce a nivel mundial, son producidos en Japón por la compañia más grade del mundo en cuanto a aminoácidos se refiere, estos aminoácidos de la más alta pureza se combinan en un solo producto que te da energía, te ayuda a construir tus músculos y te recupera después del entreamiento.
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Amino Mass</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen3.jpg"/>
+
+                              <p>
+                                 
+
+                                  AMINO MASS ofrece mas de 8.700mg de amino acidos a los musculos que trabajaron duro despues del entreniamiento, esto incluye una gran dosis de amino acidos, leucina ultra-pura y otros dos amino acidos esenciales de cadena ramificada (BCAAs) isoleucina, y valina, los BCAA's de poder AMINO MASS en forma libre 100% ramificada. Los amino acidos de forma libre con moleculas singulares, lo que significa que son digeridos y absorbidos en el torrente sanguineo rapidamente, fuera de todo el animo premiun compuesto de glutamina y taurina. Ahora tienes la oportunidad de probar la formula animo/BCAAs verdaderamente avanzada y disponible con una gran duracion. 
+
+                              </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a href="" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Amino Mass</div>
+                                </div>
+                            </a>
+                            <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
+                              <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen4.jpg"/>
+
+                              <p>
+                                 Bcaa´s 2200 Fórmula con tres aminoácidos encadenados. Los aminoácidos BCAA´S 2000 son esenciales para el crecimiento y la recuperación muscular. <br><br>
+
+                                Los aminoácidos son las unidades elementales constitutivas de las moléculas denominadas Proteínas. Son pues, y en un muy elemental símil, los "ladrillos" con los cuales el organismo reconstituye permanentemente sus proteínas específicas consumidas por la sola acción de vivir. 
+
+                              </p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+
+                <div style="margin-top: 60px;" class="block">
+                  <!-- block content -->
+                </div>
+
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/lib/framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+  </body>
+</html>
