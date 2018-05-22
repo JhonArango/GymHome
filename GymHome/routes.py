@@ -6,26 +6,6 @@ from GymHome.models import User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femora
 from werkzeug.urls import url_parse
 from flask_mail import Message
 
-import smtplib
-
-from_addr = 'GymHomeApp1@gmail.com'
-to = 'jhonarango.b93@gmail.com'
-
-
-# Reemplaza estos valores con tus credenciales de Google Mail
-username = 'GymHomeApp1@gmail.com'
-password = 'GymHome123'
-
-server = smtplib.SMTP('smtp.gmail.com:587')
-server.starttls()
-server.login(username, password) 
-
-Cabecera = 'To:' + 'fhgil@utp.edu.co' + '\n'      
-Cabecera += 'From: ' + 'GymHomeApp1@gmail.com' + '\n'
-Cabecera += 'Subject: ' + 'Ojala esa cucha no joda' + '\n'+'\n'
-Mensaje = 'Ya pasamos eso'
-
-
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
@@ -242,14 +222,6 @@ def proteinas():
 def aminoacidos():
     return render_template('aminoacidos.html')
 
-@GymHome.route('/correo')
-def correo():
-    server = smtplib.SMTP('smtp.gmail.com:587')
-    server.starttls()
-    server.login(username, password)
-    server.sendmail(from_addr, to,Cabecera + Mensaje)
-    hola='hoal'
-    return hola
 
 @GymHome.route('/logout')
 def logout():
