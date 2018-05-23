@@ -1,1 +1,1 @@
-web: gunicorn GymHome:GymHome
+web: gunicorn --worker-class socketio.sgunicorn.GeventSocketIOWorker GymHome:GymHome

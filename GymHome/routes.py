@@ -1,15 +1,27 @@
 from flask import render_template,flash,redirect,url_for,request
-from GymHome import GymHome,db,mail
+from GymHome import GymHome,db,mail,socketio
+from flask_socketio import SocketIO,send
 from GymHome.forms import LoginForm,RegistrationForm,RutinaForm,dataForm
 from flask_login import current_user, login_user,logout_user,login_required
 from GymHome.models import User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femoral,Pantorrilla,Hombro
 from werkzeug.urls import url_parse
-from flask_mail import Message
 
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
     return render_template('index.html', title='Home')
+
+@GymHome.route('/foro')
+def foro():
+    return render_template('foro.html', title='menu')
+
+@socketio.on('message')
+def handlemessage(msg):
+    print("mensaje: " + msg)
+    u = User.query.filter_by(username=current_user.username).first()
+
+    msg=u.username + ":" + msg
+    send(msg,broadcast=True)
 
 @GymHome.route('/login', methods=['GET', 'POST'])
 def login():
