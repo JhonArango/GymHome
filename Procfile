@@ -1,1 +1,1 @@
-web: gunicorn -k flask_socketio.worker GymHome:GymHome
+web: gunicorn -k eventlet GymHome:GymHome
