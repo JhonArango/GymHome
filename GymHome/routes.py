@@ -8,7 +8,6 @@ from werkzeug.urls import url_parse
 from datetime import datetime
 
 Lista_foro=[]
-instanteInicial = datetime.now()
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
