@@ -9,7 +9,6 @@ from datetime import datetime
 
 Lista_foro=[]
 instanteInicial = datetime.now()
-instanteInicial = instanteInicial.seconds
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
