@@ -1,8 +1,8 @@
-"""'Final2.1'
+"""users table
 
-Revision ID: 5d80081dc388
+Revision ID: 84a4c034dc29
 Revises: 
-Create Date: 2018-04-02 23:02:12.871597
+Create Date: 2018-05-24 00:27:10.779434
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '5d80081dc388'
+revision = '84a4c034dc29'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -41,6 +41,7 @@ def upgrade():
     op.create_index(op.f('ix_user_usersurname'), 'user', ['usersurname'], unique=False)
     op.create_table('biceps',
     sa.Column('idBi', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -51,12 +52,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idBi')
     )
     op.create_index(op.f('ix_biceps_descanso'), 'biceps', ['descanso'], unique=False)
+    op.create_index(op.f('ix_biceps_nombreEjer'), 'biceps', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_biceps_peso'), 'biceps', ['peso'], unique=False)
     op.create_index(op.f('ix_biceps_repeticiones'), 'biceps', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_biceps_semana'), 'biceps', ['semana'], unique=False)
     op.create_index(op.f('ix_biceps_series'), 'biceps', ['series'], unique=False)
     op.create_table('cuadriceps',
     sa.Column('idCu', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -67,12 +70,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idCu')
     )
     op.create_index(op.f('ix_cuadriceps_descanso'), 'cuadriceps', ['descanso'], unique=False)
+    op.create_index(op.f('ix_cuadriceps_nombreEjer'), 'cuadriceps', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_cuadriceps_peso'), 'cuadriceps', ['peso'], unique=False)
     op.create_index(op.f('ix_cuadriceps_repeticiones'), 'cuadriceps', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_cuadriceps_semana'), 'cuadriceps', ['semana'], unique=False)
     op.create_index(op.f('ix_cuadriceps_series'), 'cuadriceps', ['series'], unique=False)
     op.create_table('femoral',
     sa.Column('idFe', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -83,12 +88,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idFe')
     )
     op.create_index(op.f('ix_femoral_descanso'), 'femoral', ['descanso'], unique=False)
+    op.create_index(op.f('ix_femoral_nombreEjer'), 'femoral', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_femoral_peso'), 'femoral', ['peso'], unique=False)
     op.create_index(op.f('ix_femoral_repeticiones'), 'femoral', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_femoral_semana'), 'femoral', ['semana'], unique=False)
     op.create_index(op.f('ix_femoral_series'), 'femoral', ['series'], unique=False)
     op.create_table('hombro',
     sa.Column('idHo', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -99,12 +106,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idHo')
     )
     op.create_index(op.f('ix_hombro_descanso'), 'hombro', ['descanso'], unique=False)
+    op.create_index(op.f('ix_hombro_nombreEjer'), 'hombro', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_hombro_peso'), 'hombro', ['peso'], unique=False)
     op.create_index(op.f('ix_hombro_repeticiones'), 'hombro', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_hombro_semana'), 'hombro', ['semana'], unique=False)
     op.create_index(op.f('ix_hombro_series'), 'hombro', ['series'], unique=False)
     op.create_table('pantorrilla',
     sa.Column('idPa', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -115,12 +124,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idPa')
     )
     op.create_index(op.f('ix_pantorrilla_descanso'), 'pantorrilla', ['descanso'], unique=False)
+    op.create_index(op.f('ix_pantorrilla_nombreEjer'), 'pantorrilla', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_pantorrilla_peso'), 'pantorrilla', ['peso'], unique=False)
     op.create_index(op.f('ix_pantorrilla_repeticiones'), 'pantorrilla', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_pantorrilla_semana'), 'pantorrilla', ['semana'], unique=False)
     op.create_index(op.f('ix_pantorrilla_series'), 'pantorrilla', ['series'], unique=False)
     op.create_table('pecho',
     sa.Column('idPe', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -131,12 +142,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('idPe')
     )
     op.create_index(op.f('ix_pecho_descanso'), 'pecho', ['descanso'], unique=False)
+    op.create_index(op.f('ix_pecho_nombreEjer'), 'pecho', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_pecho_peso'), 'pecho', ['peso'], unique=True)
     op.create_index(op.f('ix_pecho_repeticiones'), 'pecho', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_pecho_semana'), 'pecho', ['semana'], unique=False)
     op.create_index(op.f('ix_pecho_series'), 'pecho', ['series'], unique=False)
     op.create_table('triceps',
     sa.Column('idTr', sa.Integer(), nullable=False),
+    sa.Column('nombreEjer', sa.String(length=64), nullable=True),
     sa.Column('semana', sa.Integer(), nullable=True),
     sa.Column('series', sa.Integer(), nullable=True),
     sa.Column('repeticiones', sa.Integer(), nullable=True),
@@ -147,6 +160,7 @@ def upgrade():
     sa.PrimaryKeyConstraint('idTr')
     )
     op.create_index(op.f('ix_triceps_descanso'), 'triceps', ['descanso'], unique=False)
+    op.create_index(op.f('ix_triceps_nombreEjer'), 'triceps', ['nombreEjer'], unique=False)
     op.create_index(op.f('ix_triceps_peso'), 'triceps', ['peso'], unique=False)
     op.create_index(op.f('ix_triceps_repeticiones'), 'triceps', ['repeticiones'], unique=False)
     op.create_index(op.f('ix_triceps_semana'), 'triceps', ['semana'], unique=False)
@@ -160,42 +174,49 @@ def downgrade():
     op.drop_index(op.f('ix_triceps_semana'), table_name='triceps')
     op.drop_index(op.f('ix_triceps_repeticiones'), table_name='triceps')
     op.drop_index(op.f('ix_triceps_peso'), table_name='triceps')
+    op.drop_index(op.f('ix_triceps_nombreEjer'), table_name='triceps')
     op.drop_index(op.f('ix_triceps_descanso'), table_name='triceps')
     op.drop_table('triceps')
     op.drop_index(op.f('ix_pecho_series'), table_name='pecho')
     op.drop_index(op.f('ix_pecho_semana'), table_name='pecho')
     op.drop_index(op.f('ix_pecho_repeticiones'), table_name='pecho')
     op.drop_index(op.f('ix_pecho_peso'), table_name='pecho')
+    op.drop_index(op.f('ix_pecho_nombreEjer'), table_name='pecho')
     op.drop_index(op.f('ix_pecho_descanso'), table_name='pecho')
     op.drop_table('pecho')
     op.drop_index(op.f('ix_pantorrilla_series'), table_name='pantorrilla')
     op.drop_index(op.f('ix_pantorrilla_semana'), table_name='pantorrilla')
     op.drop_index(op.f('ix_pantorrilla_repeticiones'), table_name='pantorrilla')
     op.drop_index(op.f('ix_pantorrilla_peso'), table_name='pantorrilla')
+    op.drop_index(op.f('ix_pantorrilla_nombreEjer'), table_name='pantorrilla')
     op.drop_index(op.f('ix_pantorrilla_descanso'), table_name='pantorrilla')
     op.drop_table('pantorrilla')
     op.drop_index(op.f('ix_hombro_series'), table_name='hombro')
     op.drop_index(op.f('ix_hombro_semana'), table_name='hombro')
     op.drop_index(op.f('ix_hombro_repeticiones'), table_name='hombro')
     op.drop_index(op.f('ix_hombro_peso'), table_name='hombro')
+    op.drop_index(op.f('ix_hombro_nombreEjer'), table_name='hombro')
     op.drop_index(op.f('ix_hombro_descanso'), table_name='hombro')
     op.drop_table('hombro')
     op.drop_index(op.f('ix_femoral_series'), table_name='femoral')
     op.drop_index(op.f('ix_femoral_semana'), table_name='femoral')
     op.drop_index(op.f('ix_femoral_repeticiones'), table_name='femoral')
     op.drop_index(op.f('ix_femoral_peso'), table_name='femoral')
+    op.drop_index(op.f('ix_femoral_nombreEjer'), table_name='femoral')
     op.drop_index(op.f('ix_femoral_descanso'), table_name='femoral')
     op.drop_table('femoral')
     op.drop_index(op.f('ix_cuadriceps_series'), table_name='cuadriceps')
     op.drop_index(op.f('ix_cuadriceps_semana'), table_name='cuadriceps')
     op.drop_index(op.f('ix_cuadriceps_repeticiones'), table_name='cuadriceps')
     op.drop_index(op.f('ix_cuadriceps_peso'), table_name='cuadriceps')
+    op.drop_index(op.f('ix_cuadriceps_nombreEjer'), table_name='cuadriceps')
     op.drop_index(op.f('ix_cuadriceps_descanso'), table_name='cuadriceps')
     op.drop_table('cuadriceps')
     op.drop_index(op.f('ix_biceps_series'), table_name='biceps')
     op.drop_index(op.f('ix_biceps_semana'), table_name='biceps')
     op.drop_index(op.f('ix_biceps_repeticiones'), table_name='biceps')
     op.drop_index(op.f('ix_biceps_peso'), table_name='biceps')
+    op.drop_index(op.f('ix_biceps_nombreEjer'), table_name='biceps')
     op.drop_index(op.f('ix_biceps_descanso'), table_name='biceps')
     op.drop_table('biceps')
     op.drop_index(op.f('ix_user_usersurname'), table_name='user')

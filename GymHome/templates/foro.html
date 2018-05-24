@@ -66,13 +66,12 @@
                   <br>
                   <input style="background:white; color:black;" type="text" id="myMessage">
                   <button style="left:50%; width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white" type="button" id="send">send</button>
-                  <ul>
+
+                  <ul id="message">
+
                   {% for p in lista %}
-                    <li>{%print p%}</li>
-                  {%endfor%}
-                  </ul>
-                  
-                  <ul id="message"></ul>
+                  <li>{%print p%}</li>
+                  {%endfor%}</ul>
 
                   <script
                     src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
