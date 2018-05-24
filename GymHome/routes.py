@@ -11,7 +11,6 @@ Lista_foro=[]
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
-    print(instanteInicial)
     return render_template('index.html', title='Home')
 
 
