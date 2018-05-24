@@ -22,6 +22,7 @@ def handlemessage(msg):
     print("mensaje: " + msg)
     u = User.query.filter_by(username=current_user.username).first()
     msg=u.username + ":" + msg
+    Lista_foro.append(msg)
     send(msg,broadcast=True)
 
 @GymHome.route('/login', methods=['GET', 'POST'])
