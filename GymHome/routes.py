@@ -15,7 +15,6 @@ def index():
 
 @GymHome.route('/foro')
 def foro():
-    print(Lista_foro)
     return render_template('foro.html', title='menu',lista=Lista_foro)
 
 @socketio.on('message')
@@ -23,7 +22,6 @@ def handlemessage(msg):
     print("mensaje: " + msg)
     u = User.query.filter_by(username=current_user.username).first()
     msg=u.username + ":" + msg
-    Lista_foro.append(msg)
     send(msg,broadcast=True)
 
 @GymHome.route('/login', methods=['GET', 'POST'])
