@@ -1,5 +1,5 @@
 from flask import render_template,flash,redirect,url_for,request
-from GymHome import GymHome,db,mail,socketio
+from GymHome import GymHome,db,mail,socketio,Lista_foro
 from flask_socketio import SocketIO,send
 from GymHome.forms import LoginForm,RegistrationForm,RutinaForm,dataForm
 from flask_login import current_user, login_user,logout_user,login_required
@@ -7,7 +7,7 @@ from GymHome.models import User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femora
 from werkzeug.urls import url_parse
 from datetime import datetime
 
-Lista_foro=[]
+
 @GymHome.route('/')
 @GymHome.route('/index')
 def index():
