@@ -13,9 +13,9 @@ from datetime import datetime
 def index():
     return render_template('index.html', title='Home')
 
-
 @GymHome.route('/foro')
 def foro():
+    print(Lista_foro)
     return render_template('foro.html', title='menu',lista=Lista_foro)
 
 @socketio.on('message')
@@ -24,7 +24,6 @@ def handlemessage(msg):
     u = User.query.filter_by(username=current_user.username).first()
     msg=u.username + ":" + msg
     Lista_foro.append(msg)
-    print(Lista_foro)
     send(msg,broadcast=True)
 
 @GymHome.route('/login', methods=['GET', 'POST'])
