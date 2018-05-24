@@ -4,6 +4,10 @@ from GymHome import db
 from flask_login import UserMixin
 from GymHome import login
 
+class History(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    messagef=db.Column(db.String(500))
+
 class User(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
     userid=db.Column(db.String(64), index=True, unique=True)

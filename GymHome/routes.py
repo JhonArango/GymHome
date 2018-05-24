@@ -3,7 +3,7 @@ from GymHome import GymHome,db,mail,socketio,Lista_foro
 from flask_socketio import SocketIO,send
 from GymHome.forms import LoginForm,RegistrationForm,RutinaForm,dataForm
 from flask_login import current_user, login_user,logout_user,login_required
-from GymHome.models import User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femoral,Pantorrilla,Hombro
+from GymHome.models import History,User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femoral,Pantorrilla,Hombro
 from werkzeug.urls import url_parse
 from datetime import datetime
 
@@ -15,14 +15,17 @@ def index():
 
 @GymHome.route('/foro')
 def foro():
-    return render_template('foro.html', title='menu',lista=Lista_foro)
+    lista = History.query.all()
+    return render_template('foro.html', title='menu',lista=lista)
 
 @socketio.on('message')
 def handlemessage(msg):
     print("mensaje: " + msg)
     u = User.query.filter_by(username=current_user.username).first()
     msg=u.username + ":" + msg
-    Lista_foro.append(msg)
+    message1=History(messagef=msg)
+    db.session.add(message1)
+    db.session.commit()
     send(msg,broadcast=True)
 
 @GymHome.route('/login', methods=['GET', 'POST'])

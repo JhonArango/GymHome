@@ -70,7 +70,7 @@
                   <ul id="message">
 
                   {% for p in lista %}
-                  <li>{%print p%}</li>
+                  <li>{{p.messagef}}</li>
                   {%endfor%}</ul>
 
                   <script
@@ -78,6 +78,7 @@
 
                   <script>
                     const socket = io();
+
                     socket.on('message', function (msg) {
                       $('#message').append('<li>'+ msg)
                     })
