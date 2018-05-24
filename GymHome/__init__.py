@@ -18,5 +18,5 @@ login.login_view = 'login'
 
 from GymHome import routes,models
 
-socketio.run(GymHome,debug=True)
+#socketio.run(GymHome,debug=True)
 
