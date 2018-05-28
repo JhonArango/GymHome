@@ -1,11 +1,13 @@
 from flask import render_template,flash,redirect,url_for,request
 from GymHome import GymHome,db,mail,socketio,Lista_foro
 from flask_socketio import SocketIO,send
-from GymHome.forms import LoginForm,RegistrationForm,RutinaForm,dataForm
+from GymHome.forms import ComprarForm,LoginForm,RegistrationForm,RutinaForm,dataForm
 from flask_login import current_user, login_user,logout_user,login_required
 from GymHome.models import History,User,load_user,Pecho,Biceps,Triceps,Cuadriceps,Femoral,Pantorrilla,Hombro
 from werkzeug.urls import url_parse
 from datetime import datetime
+from flask_mail import Message
+import smtplib
 
 
 @GymHome.route('/')
@@ -178,26 +180,55 @@ def listarRutina():
         return render_template('lista.html', title='lista',sem = form.dato.data , TipoE = form.nombree.data, s=s)
     return render_template('listarRutina.html', title='listarRutina', form=form, Pe1 =Pe1,Pe2=Pe2,Pe3=Pe3,Bi1 =Bi1,Bi2=Bi2,Bi3=Bi3,Bi4 =Bi4,Ho2=Ho2,Ho3=Ho3,Ho1 =Ho1,Ho4=Ho4,Cu1 =Cu1,Cu2=Cu2,Cu3=Cu3,Cu4 =Cu4,Fe1 =Fe1,Fe2=Fe2,Fe3=Fe3,Pa1 =Pa1,Pa2=Pa2)
 
+@GymHome.route('/comprar', methods=['GET', 'POST'])
+def comprar():
+    form=ComprarForm()
+    if form.validate_on_submit():
+        from_addr = 'GymHomeApp1@gmail.com'
+        to = 'jhonarango.b93@gmail.com'
+       
+        msg = {}
+        msg['From'] ='GymHomeApp1@gmail.com'
+        msg['To'] = 'jhonarango.b93@gmail.com'
+        msg['Subject'] = "Compra"
+        body = 'Compra para el Usuario'+current_user.username+'fecha'
+
+        msg.attach(MIMEText(body, 'plain'))
+       
+        username = 'GymHomeApp1@gmail.com'
+        password = 'GymHome123'
+
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.starttls()
+        server.login(username, password) 
+        text = msg.as_string()
+        server.sendmail(from_addr,to,)
+        server.quit()
+    return render_template('comprar.html',form=form)
+
+@GymHome.route('/comprarFin')
+def comprarFin():
+    return render_template('comprarFin.html')
 
 @GymHome.route('/ejercicios')
 def ejercicios():
-    return render_template('ejercicios.html', title='menu')
+    return render_template('ejercicios.html')
 
 @GymHome.route('/alimentacion')
 def alimentacion():
-    return render_template('alimentacion.html', title='menu')
+    return render_template('alimentacion.html')
 
 @GymHome.route('/carnes')
 def carnes():
-    return render_template('carnes.html', title='menu')
+    return render_template('carnes.html')
 
 @GymHome.route('/creatina')
 def creatina():
-    return render_template('creatina.html', title='menu')
+    return render_template('creatina.html')
 
 @GymHome.route('/pre_entrenos')
 def pre_entrenos():
-    return render_template('pre_entrenos.html', title='menu')
+    return render_template('pre_entrenos.html')
 
 @GymHome.route('/proteina1')
 def proteina1():

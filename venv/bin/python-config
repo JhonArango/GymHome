@@ -1,4 +1,4 @@
-#!/home/jhonarango/Documents/GymHome/venv/bin/python
+#!/home/fabio/Emprendimiento/GymHome/venv/bin/python
 
 import sys
 import getopt
