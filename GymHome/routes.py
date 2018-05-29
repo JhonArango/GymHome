@@ -189,6 +189,7 @@ def comprar():
     form=ComprarForm()
     u = User.query.filter_by(username=current_user.username).first()
     suplemento = request.args.get('sup')
+    precio = request.args.get('precio')
     if form.validate_on_submit():
         from_address = "GymHomeApp1@gmail.com"
         to_address = "jhonarango.b93@gmail.com"
@@ -210,7 +211,7 @@ def comprar():
         smtp.quit()
         return redirect(url_for('comprarFin'))
 
-    return render_template('comprar.html',form=form,suplemento=suplemento)
+    return render_template('comprar.html',form=form,suplemento=suplemento,precio=precio)
 
 @GymHome.route('/comprarFin')
 def comprarFin():
