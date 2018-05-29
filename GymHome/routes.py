@@ -18,6 +18,7 @@ def index():
     return render_template('index.html', title='Home')
 
 @GymHome.route('/foro')
+@login_required
 def foro():
     lista = History.query.all()
     return render_template('foro.html', title='menu',lista=lista)
