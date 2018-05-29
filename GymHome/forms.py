@@ -17,6 +17,12 @@ class dataForm(FlaskForm):
     nombree = StringField('nombree')
     submit = SubmitField('Iniciar sección')
 
+class ComprarForm(FlaskForm):
+    suplemento = StringField('suplemento', validators=[DataRequired()])
+    fecha = StringField('fecha', validators=[DataRequired()])
+    hora = StringField('hora', validators=[DataRequired()]) 
+    submit = SubmitField('Iniciar sección')
+
 class RutinaForm(FlaskForm):
     tipoEjercicio = StringField('tipoejErcicio', validators=[DataRequired()])
     semana = StringField('Semana', validators=[DataRequired()])
@@ -25,8 +31,6 @@ class RutinaForm(FlaskForm):
     peso = StringField('Peso', validators=[DataRequired()])
     descanso = StringField('Descanso', validators=[DataRequired()])   
     submit = SubmitField('Iniciar sección')
-
-
 
 class RegistrationForm(FlaskForm):
     userid=StringField('Usuario', validators=[DataRequired()])
