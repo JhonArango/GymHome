@@ -54,18 +54,7 @@
                       <li>
                         <div class="item-content item-input">
                           <div class="item-inner">
-                            <div class="formulario-letra" class="item-title item-label">Seleccionar Suplemento</div>
-                            <div class="item-input-wrap">
-                              <div id="formulario-genero-seleccion">
-                                <select name="suplemento">
-                                  <optgroup label="Pecho">
-                                    <option  value="s1" selected>Suplemento1</option>
-                                    <option  value="s2">Suplemento2</option>
-                                    <option  value="s3">Suplemento3</option>
-                                  </optgroup>
-                                </select>
-                              </div>                                
-                            </div>
+                           <h1>{{suplemento}}</h1>
                           </div>
                         </div>
                       </li>
@@ -74,7 +63,7 @@
                           <div class="item-inner">
                             <div class="formulario-letra" class="item-title item-label">Fecha</div>
                             <div class="item-input-wrap">
-                              <input style="background-color: white" type="date" name="fecha" placeholder="d/m/Y">
+                              <input style="background-color: white" type="date" name="fecha" placeholder="d/m/Y" value="2001-01-01">
                             </div>
                           </div>
                         </div>
@@ -84,11 +73,31 @@
                           <div class="item-inner">
                             <div class="formulario-letra" class="item-title item-label">Hora</div>
                             <div class="item-input-wrap">
-                              <input style="background-color: white" type="time" name="hora" placeholder="Hora -  24H">
+                              <input style="background-color: white" type="time" name="hora" placeholder="Hora -  24H" value="00:00">
                             </div>
                           </div>
                         </div>
-                      </li>                                                   
+                      </li> 
+                      <li>
+                        <div class="item-content item-input">
+                          <div class="item-inner">
+                            <div class="formulario-letra" class="item-title item-label">Direccion</div>
+                            <div class="item-input-wrap">
+                              <input style="background-color: white" type="text" name="username" placeholder="Direccion">
+                            </div>
+                          </div>
+                        </div>
+                      </li>  
+                      <li>
+                        <div class="item-content item-input">
+                          <div class="item-inner">
+                            <div class="formulario-letra" class="item-title item-label">Telefono</div>
+                            <div class="item-input-wrap">
+                              <input style="background-color: white" type="text" name="username" placeholder="Telefono">
+                            </div>
+                          </div>
+                        </div>
+                      </li>                                                 
                     </ul>
                     <div class="block">                      
                     <input style="height:40px; width: 70%; margin-left: 15%; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; bottom: 10px; " class="item-link list-button" type="submit" name="botEnviar" value="Comprar"/>

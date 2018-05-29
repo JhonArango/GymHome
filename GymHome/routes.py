@@ -183,6 +183,7 @@ def listarRutina():
 @GymHome.route('/comprar', methods=['GET', 'POST'])
 def comprar():
     form=ComprarForm()
+    suplemento = request.args.get('sup')
     if form.validate_on_submit():
         from_addr = 'GymHomeApp1@gmail.com'
         to = 'jhonarango.b93@gmail.com'
@@ -204,7 +205,7 @@ def comprar():
         text = msg.as_string()
         server.sendmail(from_addr,to,)
         server.quit()
-    return render_template('comprar.html',form=form)
+    return render_template('comprar.html',form=form,suplemento=suplemento)
 
 @GymHome.route('/comprarFin')
 def comprarFin():
