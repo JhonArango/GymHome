@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
-  <body >
+  <body>
     <!-- App root element -->
         <div id="app">
           <!-- Statusbar overlay -->
@@ -23,55 +24,38 @@
           <!-- Your main view, should have "view-main" class -->
           <div class="view view-main">
             <!-- Initial Page, "data-name" contains page name -->
-            
+            <div data-name="home" class="page">
+              <div id="registroContenedor" class="page-content">
 
-              <div id="navbar" class="navbar">
-                <div style="background-color: #062042" class="navbar-inner">
-                    <div id="registroBox" class="left">
-                        <a href="{{url_for('index')}}" class="button external link external">
-                          <i class="icon icon-back"></i>
-                        </a>
-                    </div>
-                    <div id="logoImagenBox" class="title">
-                      <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                    </div>
+
+
+                <div id="navbar" class="navbar">
+                  <div id="navbarInner" class="navbar-inner">
+                      <div id="registroBox" class="left">
+                          <a href="{{url_for('index')}}" class="button external">
+                            <i class="icon icon-back"></i>
+                          </a>
+                      </div>                      
+                  </div>
                 </div>
-              </div>
 
-              <div id="navbarBottom" class="toolbar toolbar-bottom-md">
-                    <div class="toolbar-inner">
-                        <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
-                        </a>
-                        <a href="#" class="link">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
-                        </a>
-                        <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                        <a href="#" class="link">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
-                        </a>
-                        <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
-                        </a>
-                    </div>
-                </div> 
-
-              <!-- Scrollable page content -->
-              <div id="registroContenedor" class="page-content" style="color: white;">
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                <div id="registroContenedor" class="page-content" style="color: white;">
 
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js" charset="utf-8"></script>
-                  <br>
-                  <br>
-                  <input style="background:white; color:black;" type="text" id="myMessage">
-                  <button style="left:50%; width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white" type="button" id="send">send</button>
+                  <p style="color: black; text-align: center; font-size: 2em;margin-top: 0px">¡Escribe tu mensaje!</p>
+                  <input style="width: 95%;height: 2em;border: 2px solid white; border-radius: 10px; background:#075e54; color:white; margin: auto;" type="text" id="myMessage">
+                  <div>
+                  <button style="color: white;position:relative;left:25%;width: 50%; height: 2em;margin:auto; border: 2px solid white; border-radius: 15px; background-color: #075e54" type="button" id="send">¡Enviar!</button>
+                  </div>
 
-                  <ul id="message">
+                  <ul id="message" style="color: black;margin-bottom: 6em">
 
                   {% for p in lista %}
                   <li>{{p.messagef}}</li>
                   {%endfor%}</ul>
+
+                  
 
                   <script
                     src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -88,16 +72,36 @@
                     $('#myMessage').val('');
                     });
 
-                  </script>
-
-                    
+                  </script>                   
                     
               </div>
-            
-          </div>
-        </div>
 
-    
+                <!-- EL CONTENIDO DE LA PAGINA VA AQUI -->
+                
+
+                <<div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <i class="f7-icons">eye</i>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <i class="f7-icons">pie</i>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <i class="f7-icons">home_fill</i>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <i class="f7-icons">box</i>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <i class="f7-icons">calendar</i>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
 
 
     <!-- Path to Framework7 Library JS-->
