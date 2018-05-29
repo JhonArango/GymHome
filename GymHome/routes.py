@@ -191,6 +191,7 @@ def comprar():
     if form.validate_on_submit():
         from_address = "GymHomeApp1@gmail.com"
         to_address = "jhonarango.b93@gmail.com"
+        contrasenaemail="GymHome123"
 
         message = "Cliente: "+ u.username + u.usersurname + "\nFecha: "+form.fecha.data + "\nHora: "+ form.hora.data + "\nDireccion: " + form.direccion.data + "\nTelefono: "+ form.telefono.data + "\nPedido: " + suplemento
 
@@ -199,11 +200,11 @@ def comprar():
         mime_message["To"] = to_address
         mime_message["Subject"] = "Venta Registrada - GymHomeApp"
 
-        smtp = smtplib.SMTP("smtp.gmail.com", 587)
+        smtp = smtplib.SMTP("smtp.gmail.com", 465)
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
-        smtp.login(from_address, "GymHome123")
+        smtp.login(from_address,contrasenaemail)
         smtp.sendmail(from_address, to_address, mime_message.as_string())
         smtp.quit()
         return redirect(url_for('comprarFin'))
