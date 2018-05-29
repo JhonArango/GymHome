@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
-    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -36,6 +35,14 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
+                      <div id="logoImagenBox" class="title">
+                        <a style="height: 100%" href="#" class="link external">
+                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
+                        </a>
+                      </div>
+                      <div  id="loginBox" class="right">
+                          <a href="#" class="button external"></a>
+                      </div>
                   </div>
                 </div>
 
@@ -46,7 +53,7 @@
                 <div class="block">
                   <div style="background-color: white" class="list simple-list">
                     <ul>
-                      <li style="background: gray;">{{TipoE}}</li>
+                      <li style="background: gray;">{{op}}</li>
                       <li>Semana: {{sem}}</li>
                       <li>Series: {{s.series}}</li>
                       <li>Repeticiones: {{s.repeticiones}}</li>
@@ -64,22 +71,23 @@
                  <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <i class="f7-icons">eye</i>
+                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <i class="f7-icons">pie</i>
+                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <i class="f7-icons">home_fill</i>
+                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <i class="f7-icons">box</i>
+                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <i class="f7-icons">calendar</i>
+                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
                         </a>
                     </div>
-                </div>
+                </div>   
+              </div>
             
           </div>
         </div>   

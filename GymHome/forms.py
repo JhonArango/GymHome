@@ -15,6 +15,7 @@ class dataForm(FlaskForm):
     dato = StringField('Dato')
     ejercicio = StringField('Ejercicio')
     nombree = StringField('nombree')
+    op = StringField('op')
     submit = SubmitField('Iniciar sección')
 
 class ComprarForm(FlaskForm):

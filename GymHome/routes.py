@@ -180,7 +180,7 @@ def listarRutina():
             s = Femoral.query.filter_by(nombreEjer=form.nombree.data,semana=form.dato.data,user_id=u.id).first()
         if(form.ejercicio.data == 'Pantorrilla'):
             s = Pantorrilla.query.filter_by(nombreEjer=form.nombree.data,semana=form.dato.data,user_id=u.id).first()
-        return render_template('lista.html', title='lista',sem = form.dato.data , TipoE = form.nombree.data, s=s)
+        return render_template('lista.html', title='lista',sem = form.dato.data , op = form.op.data, s=s)
     return render_template('listarRutina.html', title='listarRutina', form=form, Pe1 =Pe1,Pe2=Pe2,Pe3=Pe3,Bi1 =Bi1,Bi2=Bi2,Bi3=Bi3,Bi4 =Bi4,Ho2=Ho2,Ho3=Ho3,Ho1 =Ho1,Ho4=Ho4,Cu1 =Cu1,Cu2=Cu2,Cu3=Cu3,Cu4 =Cu4,Fe1 =Fe1,Fe2=Fe2,Fe3=Fe3,Pa1 =Pa1,Pa2=Pa2)
 
 @GymHome.route('/comprar', methods=['GET', 'POST'])
