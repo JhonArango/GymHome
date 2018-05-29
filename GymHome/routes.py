@@ -200,7 +200,7 @@ def comprar():
         mime_message["To"] = to_address
         mime_message["Subject"] = "Venta Registrada - GymHomeApp"
 
-        smtp = smtplib.SMTP("smtp.gmail.com", 465)
+        smtp = smtplib.SMTP_SSL("smtp.gmail.com", 587)
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
