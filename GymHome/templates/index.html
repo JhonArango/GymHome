@@ -35,9 +35,6 @@
                         <div id="registroBox" class="left">
                             <a href="{{url_for('register')}}" class="button external">Registro</a>
                         </div>
-                        <a href="{{url_for('rutina')}}" class="external">
-                          <img id="" src="../static/imagenes/GymHomeLogo.jpeg"/>
-                        </a>
                         <div  id="loginBox" class="right">
                             {% if current_user.is_anonymous %}
                             <a class="link external" href="{{url_for('login')}}" class="button external">LOGIN</a>
