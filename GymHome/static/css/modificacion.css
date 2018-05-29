@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 body{	
-	background: url("../imagenes/back5.jpg");
-	background-size:cover;
+	background-color: #ece5dd;
+	
 }
 
 #navbar{
 	font-size: 100%;
-	background: url("../imagenes/back5-flip.jpg");
-	background-size:cover;
+	background-color: #075e54;
+	
 	height: 10%;
 }
 
@@ -38,7 +38,7 @@ body{
 }
 
 #navbarRedes{
-	background: url("../imagenes/back5-flip.jpg");
+	background-color: #ece5dd;
 	background-size:cover;
 	height: 3%;
 	margin-top: 3%;
@@ -91,13 +91,22 @@ body{
 	display: inline-block;
 }
 
+#foro{
+	border: 4px solid #075e54;
+	border-radius: 10px;
+	font-size: 1.32em;
+	font-weight: bolder;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+
 
 #ejercicios{
 	width: 90%;
 	height: 90%;
-	border: 4px solid #1C568D;
+	border: 4px solid #075e54;
 	border-radius: 10px;
-	margin-top: 20%;
+	margin-top: 5%;
 	margin-left: 2%;
 	
 }
@@ -105,9 +114,9 @@ body{
 #alimentacion{
 	width: 90%;
 	height: 90%;
-	border: 4px solid #1C568D;
+	border: 4px solid #075e54;
 	border-radius: 10px;
-	margin-top: 20%;
+	margin-top: 5%;
 	margin-left: 2%;
 	
 }
@@ -115,9 +124,9 @@ body{
 #suplementacion{
 	width: 90%;
 	height: 90%;
-	border: 4px solid #1C568D;
+	border: 4px solid #075e54;
 	border-radius: 10px;
-	margin-top: 20%;
+	margin-top: 5%;
 	margin-left: 2%;
 	
 }
@@ -125,9 +134,9 @@ body{
 #rutina{
 	width: 90%;
 	height: 90%;
-	border: 4px solid #1C568D;
+	border: 4px solid #075e54;
 	border-radius: 10px;
-	margin-top: 20%;
+	margin-top: 5%;
 	margin-left: 2%;
 	
 }
@@ -136,7 +145,7 @@ body{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background: url("../imagenes/back5-flip.jpg");
+	background-color: #075e54;
 	background-size:cover;
 }
 
@@ -162,8 +171,7 @@ body{
 
 
 #loginContenedor{
-	background: url("../imagenes/back5-light.jpg");
-	background-size:cover;	
+	background-color: white;	
 }
 
 #logoImagenLogin{
@@ -182,7 +190,7 @@ body{
 	margin-left: 10%;	
 }
 #registroContenedor{
-	background: url("../imagenes/back5.jpg");
+	background-color: white;
 	background-size:cover;
 }
 

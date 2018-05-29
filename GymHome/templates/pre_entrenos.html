@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -35,14 +36,7 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
-                      <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                      </div>
-                      <div  id="loginBox" class="right">
-                          <a href="#" class="button external"></a>
-                      </div>
+
                   </div>
                 </div>
 
@@ -57,6 +51,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/pre-entrenosImagen.jpg"/>
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                 Energía en polvo gracias a la tecnología NO3 y a ingredientes exclusivos, como la Creatina Nitrato. C4 Extreme es una fórmula pre-entreno más avanzada que cualquier otro suplemento de su clase. Posee la capacidad de incendiar tu mente, músculos y entrenamiento día tras día. <br><br>
 
@@ -72,6 +67,7 @@
                             </a>
                             <div  style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/pre-entrenosImagen2.jpg"/>
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                 El suplemento pre-entreno mas vendido en USA, por delante del conocido No Xplode. <br><br>
 
@@ -89,7 +85,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/pre-entrenosImagen3.jpg"/>
-
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                 Legendary es la fórmula de última generación, diseñada por NeoPharma Colombia para potencializar tus entrenos, mantenerte nutrido y con la energía que necesitas evitando los daños prolongados que el entrenamiento intenso causa dentro de la célula muscular. <br><br>
 
@@ -108,7 +104,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/pre-entrenosImagen4.jpg"/>
-
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                   RECOV R Formula Post entreno - recuperador muscular El consumo de Glutamina, aminoácidos de cadena ramificada y proteínas de alto valor, son vitales para repara los micro-daños causados en el músculo por el ejercicio intenso, así como para construir nuevos tejidos en mira de una mejor adaptación al entrenamiento. <br><br>
 
@@ -132,19 +128,19 @@
                 <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                          <i class="f7-icons">eye</i>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                          <i class="f7-icons">pie</i>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                          <i class="f7-icons">home_fill</i>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                          <i class="f7-icons">box</i>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                          <i class="f7-icons">calendar</i>
                         </a>
                     </div>
                 </div>

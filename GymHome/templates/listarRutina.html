@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -35,14 +36,7 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
-                      <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="#" class="link external">
-                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                      </div>
-                      <div  id="loginBox" class="right">
-                          <a href="#" class="button external"></a>
-                      </div>
+
                   </div>
                 </div>
 
@@ -54,21 +48,21 @@
                 <div class="block">
                  <div class="list accordion-list" style="color: white;">
                       <ul>
-                        <li class="accordion-item" style="background: white;">
+                        <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
-                                      <div class="item-title" style=" color: black;">Pecho</div>
+                                      <div class="item-title" style=" color: black">Pecho</div>
                                   </div>
                               </a>
                           </li>
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Barbell Bench Press-Medium Grip</div>
+                                      <div class="item-title" style=" color: black">Pecho Plano</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em ">
                                   Semana
                                   {% for p in Pe1 %}
                                   <form action="" method="post">
@@ -77,7 +71,7 @@
                                     <input  type="hidden" name='nombree' value='Barbell Bench Press-Medium Grip'>
                                     <input  type="hidden" name='ejercicio' value='Pecho'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -87,11 +81,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Barbell Incline Bench Press Medium-Grip</div>
+                                      <div class="item-title" style=" color: black">Pecho plano inclinado</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Pe2 %}
                                   <form action="" method="post">
@@ -100,7 +94,7 @@
                                     <input  type="hidden" name='nombree' value='Barbell Incline Bench Press Medium-Grip'>
                                     <input  type="hidden" name='ejercicio' value='Pecho'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -110,11 +104,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Decline Barbell Bench Press</div>
+                                      <div class="item-title" style=" color: black">Pecho plano declinado</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Pe3 %}
                                   <form action="" method="post">
@@ -123,14 +117,14 @@
                                     <input  type="hidden" name='nombree' value='Decline Barbell Bench Press'>
                                     <input  type="hidden" name='ejercicio' value='Pecho'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
                                   
                                 </div>
                           </li>
-                          <li class="accordion-item" style="background: white;">
+                          <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
                                       <div class="item-title" style=" color: black;">Hombro</div>
@@ -140,11 +134,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Side Lateral Raise</div>
+                                      <div class="item-title" style=" color: black">Levantamientos laterales</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Ho1 %}
                                   <form action="" method="post">
@@ -153,7 +147,7 @@
                                     <input  type="hidden" name='nombree' value='Side Lateral Raise'>
                                     <input  type="hidden" name='ejercicio' value='Hombro'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -163,11 +157,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Standing Military Press</div>
+                                      <div class="item-title" style=" color: black">Presion militar de pie</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Ho2 %}
                                   <form action="" method="post">
@@ -176,7 +170,7 @@
                                     <input  type="hidden" name='nombree' value='Standing Military Press'>
                                     <input  type="hidden" name='ejercicio' value='Hombro'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -186,11 +180,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Barbell Shoulder Press</div>
+                                      <div class="item-title" style=" color: black">Presion hombro de pie</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Ho3 %}
                                   <form action="" method="post">
@@ -199,7 +193,7 @@
                                     <input  type="hidden" name='nombree' value='Barbell Shoulder Press'>
                                     <input  type="hidden" name='ejercicio' value='Hombro'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -209,11 +203,11 @@
                            <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Dumbbell Shoulder Press</div>
+                                      <div class="item-title" style=" color: black">Presion de hombro mancuerna</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Ho4 %}
                                   <form action="" method="post">
@@ -222,14 +216,14 @@
                                     <input  type="hidden" name='nombree' value='Dumbbell Shoulder Press'>
                                     <input  type="hidden" name='ejercicio' value='Hombro'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
                                   
                                 </div>
                           </li>
-                            <li class="accordion-item" style="background: white;">
+                            <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
                                       <div class="item-title" style=" color: black;">Biceps</div>
@@ -239,11 +233,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Dumbbell Bicep Curl</div>
+                                      <div class="item-title" style=" color: black">Levantamiento Biceps</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Bi1 %}
                                   <form action="" method="post">
@@ -252,7 +246,7 @@
                                     <input  type="hidden" name='nombree' value='Dumbbell Bicep Curl'>
                                     <input  type="hidden" name='ejercicio' value='Biceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -262,11 +256,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Seated Dumbbell Curl</div>
+                                      <div class="item-title" style=" color: black">Levantamiento Biceps sentado</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Bi2 %}
                                   <form action="" method="post">
@@ -275,7 +269,7 @@
                                     <input  type="hidden" name='nombree' value='Seated Dumbbell Curl'>
                                     <input  type="hidden" name='ejercicio' value='Biceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -285,11 +279,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Standing Biceps Cable Curl</div>
+                                      <div class="item-title" style=" color: black">Levantamiento Biceps de pie cable</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Bi3 %}
                                   <form action="" method="post">
@@ -298,7 +292,7 @@
                                     <input  type="hidden" name='nombree' value='Standing Biceps Cable Curl'>
                                     <input  type="hidden" name='ejercicio' value='Biceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -308,11 +302,11 @@
                            <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">EZ-Bar Skullcrusher</div>
+                                      <div class="item-title" style=" color: black">Romprecraneo barra EZ</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Bi4 %}
                                   <form action="" method="post">
@@ -321,14 +315,14 @@
                                     <input  type="hidden" name='nombree' value='EZ-Bar Skullcrusher'>
                                     <input  type="hidden" name='ejercicio' value='Biceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
                                   
                                 </div>
                           </li>
-                            <li class="accordion-item" style="background: white;">
+                            <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
                                       <div class="item-title" style=" color: black;">Cuadriceps</div>
@@ -338,11 +332,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Leg Press</div>
+                                      <div class="item-title" style=" color: black">Presion pierna</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Cu1 %}
                                   <form action="" method="post">
@@ -351,7 +345,7 @@
                                     <input  type="hidden" name='nombree' value='Leg Press'>
                                     <input  type="hidden" name='ejercicio' value='Cuadriceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -361,11 +355,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Leg Extensions</div>
+                                      <div class="item-title" style=" color: black">Extensiones pierna</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Cu2 %}
                                   <form action="" method="post">
@@ -374,7 +368,7 @@
                                     <input  type="hidden" name='nombree' value='Leg Extensions'>
                                     <input  type="hidden" name='ejercicio' value='Cuadriceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -384,11 +378,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Barbell Squat</div>
+                                      <div class="item-title" style=" color: black">Sentadilla</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Cu3 %}
                                   <form action="" method="post">
@@ -397,7 +391,7 @@
                                     <input  type="hidden" name='nombree' value='Barbell Squat'>
                                     <input  type="hidden" name='ejercicio' value='Cuadriceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -407,11 +401,11 @@
                            <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Single-Leg Press</div>
+                                      <div class="item-title" style=" color: black">Presion una pierna</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Cu4 %}
                                   <form action="" method="post">
@@ -420,14 +414,14 @@
                                     <input  type="hidden" name='nombree' value='Single-Leg Press'>
                                     <input  type="hidden" name='ejercicio' value='Cuadriceps'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
                                   
                                 </div>
                           </li>
-                          <li class="accordion-item" style="background: white;">
+                          <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
                                       <div class="item-title" style=" color: black;">Femoral</div>
@@ -437,11 +431,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Lying Leg Curls</div>
+                                      <div class="item-title" style=" color: black">Levantamiento pierna acostado</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Fe1 %}
                                   <form action="" method="post">
@@ -450,7 +444,7 @@
                                     <input  type="hidden" name='nombree' value='Lying Leg Curls'>
                                     <input  type="hidden" name='ejercicio' value='Femoral'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -460,11 +454,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Romanian Dead Lift</div>
+                                      <div class="item-title" style=" color: black">Peso muerto romano</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Fe2 %}
                                   <form action="" method="post">
@@ -473,7 +467,7 @@
                                     <input  type="hidden" name='nombree' value='Romanian Dead Lift'>
                                     <input  type="hidden" name='ejercicio' value='Femoral'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -483,11 +477,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Deadlift</div>
+                                      <div class="item-title" style=" color: black">Peso muerto</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Fe3 %}
                                   <form action="" method="post">
@@ -496,14 +490,14 @@
                                     <input  type="hidden" name='nombree' value='Deadlift'>
                                     <input  type="hidden" name='ejercicio' value='Femoral'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
                                   
                                 </div>
                           </li>
-                          <li class="accordion-item" style="background: white;">
+                          <li class="accordion-item" style="background: #ccc;">
                               <a href="" class="item-content">
                                   <div class="item-inner">
                                       <div class="item-title" style=" color: black;">Pantorrilla</div>
@@ -513,11 +507,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Standing Calf Raises</div>
+                                      <div class="item-title" style=" color: black">Pantorilla de pie</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Pa1 %}
                                   <form action="" method="post">
@@ -526,7 +520,7 @@
                                     <input  type="hidden" name='nombree' value='Standing Calf Raises'>
                                     <input  type="hidden" name='ejercicio' value='Pantorrilla'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -536,11 +530,11 @@
                           <li class="accordion-item">
                               <a href="" class="item-link item-content">
                                   <div class="item-inner">
-                                      <div class="item-title">Seated Calf Raise</div>
+                                      <div class="item-title" style=" color: black">Pantorilla acostado</div>
                                   </div>
                               </a>
                               
-                                <div class="accordion-item-content" style="text-align: center; ">
+                                <div class="accordion-item-content" style="text-align: center;color: #075e54;font-size: 1.5em">
                                   Semana
                                   {% for p in Pa2 %}
                                   <form action="" method="post">
@@ -549,7 +543,7 @@
                                     <input  type="hidden" name='nombree' value='Seated Calf Raise'>
                                     <input  type="hidden" name='ejercicio' value='Pantorrilla'>
                                     <input  type="hidden" name='dato' value={{p.semana}}>
-                                    <input  type="submit" value={{p.semana}} style="width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: white; padding: 0.5em">
+                                    <input  type="submit" value={{p.semana}} style="color: white;width: 50%; margin:auto; border: 1px solid white; border-radius: 8px; background-color: #075e54; padding: 0.5em">
                                     <br>
                                   </form>
                                   {%endfor%}
@@ -571,23 +565,22 @@
                  <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                          <i class="f7-icons">eye</i>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                          <i class="f7-icons">pie</i>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                          <i class="f7-icons">home_fill</i>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                          <i class="f7-icons">box</i>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                          <i class="f7-icons">calendar</i>
                         </a>
                     </div>
-                </div>   
-              </div>
+                </div>
             
           </div>
         </div>   

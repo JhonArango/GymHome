@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -35,14 +36,7 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
-                      <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="#" class="link external">
-                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                      </div>
-                      <div  id="loginBox" class="right">
-                          <a href="#" class="button external"></a>
-                      </div>
+
                   </div>
                 </div>
 
@@ -50,10 +44,10 @@
                 <div class="row">
                     <!-- Each "cell" has col-[widht in percents] class -->
                     <div class="col-50">
-                      <a style="height:40px; width: 80%; margin-left:10%;border: 2px solid white; border-radius: 15px; background-color: white; position: relative; top: 40px" href="{{url_for('agregarRutina')}}" class="link external">Agregar Rutina</a>
+                      <a style="color:white;height:40px; width: 80%; margin-left:10%;border: 2px solid white; border-radius: 15px; background-color: #075e54; position: relative; top: 40px" href="{{url_for('agregarRutina')}}" class="link external">Agregar Rutina</a>
                     </div>
                     <div class="col-50">
-                      <a style="height:40px; width: 80%; margin-left:10%; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; top: 40px" href="{{url_for('listarRutina')}}" class="link external">Historial</a>
+                      <a style="color:white;height:40px; width: 80%; margin-left:10%; border: 2px solid white; border-radius: 15px; background-color: #075e54; position: relative; top: 40px" href="{{url_for('listarRutina')}}" class="link external">Historial</a>
                     </div>
                 </div>
                 <div style="position: relative; top: 50px" class="card demo-card-header-pic">
@@ -73,23 +67,22 @@
                 <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                          <i class="f7-icons">eye</i>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                          <i class="f7-icons">pie</i>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                          <i class="f7-icons">home_fill</i>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                          <i class="f7-icons">box</i>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                          <i class="f7-icons">calendar</i>
                         </a>
                     </div>
-                </div>   
-              </div>
+                </div>
             
           </div>
         </div>   

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>      
 
@@ -21,17 +22,27 @@
             <div class="view">
               <div class="page">
                 <div id="loginContenedor" class="page-content login-screen-content">
-                  <div class="login-screen-title">
-                    <br>
-                    <img id="logoImagenLogin" src="../static/imagenes/GymHomeLogo2.png"/>
+                  <div id="navbar" class="navbar">
+                    <div id="navbarInner" class="navbar-inner">
+                        <div id="registroBox" class="left">
+                            <a href="{{url_for('index')}}" class="button external">
+                              <i class="icon icon-back"></i>
+                            </a>
+                        </div>                      
+                    </div>
                   </div>
-                  <form style="position: relative; top: -50px" method="post">
+                  <div class="login-screen-title">
+                    
+                    
+                  </div>
+
+                  <form style="position: relative;" method="post">
                     {{ form.hidden_tag()}}
                     <div class="list">
                       <ul>
                         <li class="item-content item-input">
                           <div class="item-inner">
-                            <div style="color:white; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">USUARIO</div>
+                            <div style="color:black; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">USUARIO</div>
                             <div class="item-input-wrap">
                               <input style="background-color: white" type="text" name="userid" placeholder="Digita tu usuario">
                             </div>
@@ -39,7 +50,7 @@
                         </li>
                         <li class="item-content item-input">
                           <div class="item-inner">
-                            <div style="color:white; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">CONTRASEÑA</div>
+                            <div style="color:black; font-weight:bold; font-size: 15px; margin: 5px" class="item-title item-label">CONTRASEÑA</div>
                             <div class="item-input-wrap">
                               <input style="background-color: white" type="password" name="password" placeholder="Digita tu contraseña">
                             </div>
@@ -49,15 +60,32 @@
                     </div>
                     <div class="list">
                       <ul>
-                        <li> <input  style="width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white" class="item-link list-button" type="submit" name="botEnviar" value="Iniciar sección" /></li>
+                        <li> <input  style="color:white;width: 50%; margin:auto; border: 2px solid #075e54; border-radius: 15px; background-color: #075e54" class="item-link list-button" type="submit" name="botEnviar" value="Iniciar sesión" /></li>
                       </ul>
                       <div class="block-footer">
-                        <p style="color:white; font-weight:bold;">¡Bienvenido a la familia GymHome!</p>
-                        <br>
-                        <p><a style="border: 2px solid white; border-radius: 15px; padding: 15px; background-color: white" class="external" href="{{ url_for('index') }}">Cerrar ventana</a></p>
+                        <p style="color:#075e54; font-weight:bold;font-size: 1.5em">¡Bienvenido a la familia GymHome!</p>
                       </div>
                     </div>
                   </form>
+                  <div id="navbarBottom" class="toolbar toolbar-bottom-md">
+                      <div class="toolbar-inner">
+                          <a href="{{url_for('ejercicios')}}" class="link external">
+                            <i class="f7-icons">eye</i>
+                          </a>
+                          <a href="{{url_for('alimentacion')}}" class="link external">
+                            <i class="f7-icons">pie</i>
+                          </a>
+                          <a href="{{url_for('index')}}" class="link external">
+                            <i class="f7-icons">home_fill</i>
+                          </a>
+                          <a href="{{url_for('suplementacion')}}" class="link external">
+                            <i class="f7-icons">box</i>
+                          </a>
+                          <a href="{{url_for('rutina')}}" class="link external">
+                            <i class="f7-icons">calendar</i>
+                          </a>
+                      </div>
+                  </div>
                 </div>
               </div>
             </div>

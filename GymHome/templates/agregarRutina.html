@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -35,14 +36,7 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
-                      <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                      </div>
-                      <div  id="loginBox" class="right">
-                          <a href="#" class="button external"></a>
-                      </div>
+
                   </div>
                 </div>
 
@@ -62,36 +56,36 @@
                               <div id="formulario-genero-seleccion">
                                 <select name="tipoEjercicio">
                                   <optgroup label="Pecho">
-                                    <option  value="Pecho1" selected>Barbell Bench Press-Medium Grip</option>
-                                    <option  value="Pecho2">Barbell Incline Bench Press Medium-Grip</option>
-                                    <option  value="Pecho3">Decline Barbell Bench Press</option>
+                                    <option  value="Pecho1" selected>Pecho Plano</option>
+                                    <option  value="Pecho2">Pecho Inclinado</option>
+                                    <option  value="Pecho3">Pecho Declinado</option>
                                   </optgroup>
                                   <optgroup label="Hombro">
-                                    <option  value="Hombro1">Side Lateral Raise</option>
-                                    <option  value="Hombro2">Standing Military Press</option>
-                                    <option  value="Hombro3">Barbell Shoulder Press</option>
-                                    <option  value="Hombro4">Dumbbell Shoulder Press</option>
+                                    <option  value="Hombro1">Levantamiento de laterales</option>
+                                    <option  value="Hombro2">Presion de Hombro Militar</option>
+                                    <option  value="Hombro3">Presion de hombro barra</option>
+                                    <option  value="Hombro4">Presion de hombro mancuerna</option>
                                   </optgroup>
                                   <optgroup label="Biceps">
-                                    <option  value="Biceps1">Dumbbell Bicep Curl</option>
-                                    <option  value="Biceps2">Seated Dumbbell Curl</option>
-                                    <option  value="Biceps3">Standing Biceps Cable Curl</option>
-                                    <option  value="Biceps4">EZ-Bar Skullcrusher</option>
+                                    <option  value="Biceps1">Levantamiento bicep</option>
+                                    <option  value="Biceps2">Levantamiento bicep sentado</option>
+                                    <option  value="Biceps3">Levantamiento bicep de pie cable</option>
+                                    <option  value="Biceps4">Rompecraneos barra EZ</option>
                                   </optgroup>
                                   <optgroup label="Cuadriceps">
-                                    <option  value="Cuadriceps1">Leg Press</option>
-                                    <option  value="Cuadriceps2">Leg Extensions</option>
-                                    <option  value="Cuadriceps3">Barbell Squat</option>
-                                    <option  value="Cuadriceps4">Single-Leg Press</option>
+                                    <option  value="Cuadriceps1">Presion Pierna</option>
+                                    <option  value="Cuadriceps2">Extensiones de Pierna</option>
+                                    <option  value="Cuadriceps3">Sentadilla</option>
+                                    <option  value="Cuadriceps4">Presion una pierna</option>
                                   </optgroup>
                                   <optgroup label="Femoral">
-                                    <option  value="Femoral1">Lying Leg Curls</option>
-                                    <option  value="Femoral2">Romanian Dead Lift</option>
-                                    <option  value="Femoral3">Deadlift</option>
+                                    <option  value="Femoral1">Levantamiento pierna acostado</option>
+                                    <option  value="Femoral2">Peso muerto romano</option>
+                                    <option  value="Femoral3">Peso muerto</option>
                                   </optgroup>
                                   <optgroup label="Pantorrilla">
-                                    <option  value="Pantorrilla1">Standing Calf Raises</option>
-                                    <option  value="Pantorrilla2">Seated Calf Raise</option>
+                                    <option  value="Pantorrilla1">Pantorilla de pie</option>
+                                    <option  value="Pantorrilla2">Pantorilla de sentado</option>
                                   </optgroup>
                                 </select>
                               </div>                                
@@ -151,7 +145,7 @@
                       </li>                                                    
                     </ul>
                     <div class="block">                      
-                    <input style="height:40px; width: 70%; margin-left: 15%; border: 2px solid white; border-radius: 15px; background-color: white; position: relative; bottom: 10px; " class="item-link list-button" type="submit" name="botEnviar" value="¡AGREGAR RUTINA!"/>
+                    <input style="color:white;height:50px; width: 70%; margin-left: 15%; border: 2px solid white; border-radius: 15px; background-color: #075e54; position: relative; bottom: 10px; " class="item-link list-button" type="submit" name="botEnviar" value="¡AGREGAR RUTINA!"/>
                      </div>
                   </form>
                 </div>
@@ -165,25 +159,24 @@
                 
 
                <div id="navbarBottom" class="toolbar toolbar-bottom-md">
-                  <div class="toolbar-inner">
-                      <a href="{{url_for('ejercicios')}}" class="link external">
-                        <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
-                      </a>
-                      <a href="{{url_for('alimentacion')}}" class="link external">
-                        <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
-                      </a>
-                      <a href="{{url_for('index')}}" class="link external">
-                        <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
-                      </a>
-                      <a href="{{url_for('suplementacion')}}" class="link external">
-                        <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
-                      </a>
-                      <a href="{{url_for('rutina')}}" class="link external">
-                        <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
-                      </a>
-                  </div>
-              </div>   
-              </div>
+                    <div class="toolbar-inner">
+                        <a href="{{url_for('ejercicios')}}" class="link external">
+                          <i class="f7-icons">eye</i>
+                        </a>
+                        <a href="{{url_for('alimentacion')}}" class="link external">
+                          <i class="f7-icons">pie</i>
+                        </a>
+                        <a href="{{url_for('index')}}" class="link external">
+                          <i class="f7-icons">home_fill</i>
+                        </a>
+                        <a href="{{url_for('suplementacion')}}" class="link external">
+                          <i class="f7-icons">box</i>
+                        </a>
+                        <a href="{{url_for('rutina')}}" class="link external">
+                          <i class="f7-icons">calendar</i>
+                        </a>
+                    </div>
+                </div>
             </div>
           </div>
         </div>   

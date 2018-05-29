@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
   </head>
   <body>
     <!-- App root element -->
@@ -35,14 +36,7 @@
                             <i class="icon icon-back"></i>
                           </a>
                       </div>
-                      <div id="logoImagenBox" class="title">
-                        <a style="height: 100%" href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                        </a>
-                      </div>
-                      <div  id="loginBox" class="right">
-                          <a href="#" class="button external"></a>
-                      </div>
+
                   </div>
                 </div>
 
@@ -57,6 +51,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen.jpg"/>
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                 BPI Sports ha vuelto a redefinir una nueva clase de suplementos para quemar las grasas y lograr una muy buena definición muscular, gracias a la nueva formulación de B4. Su nueva formulación con DendroMAX se ha centrado en quemar las grasas en forma efectiva, y evitar que las grasas vuelvan a almacenarse en las zonas en donde estas fueron removidas o movilizadas, junto con entregar mucha energía y concentración para potenciar cada uno de los entrenamientos.
                               </p>
@@ -70,6 +65,7 @@
                             </a>
                             <div  style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen2.jpg"/>
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                 Amino 100 Beta-Force es la perfecta mezla de los mejores aminoacidos de cadena ramificada que se conoce a nivel mundial, son producidos en Japón por la compañia más grade del mundo en cuanto a aminoácidos se refiere, estos aminoácidos de la más alta pureza se combinan en un solo producto que te da energía, te ayuda a construir tus músculos y te recupera después del entreamiento.
                               </p>
@@ -83,7 +79,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen3.jpg"/>
-
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                  
 
@@ -100,7 +96,7 @@
                             </a>
                             <div style="width: 80%; margin-left: 10%" class="accordion-item-content">
                               <img style="width: 100%; height: 100%" src="../static/imagenes/aminoacidoImagen4.jpg"/>
-
+                              <a class="button" style="background-color: #075e54;color: white">Comprar</a>
                               <p>
                                  Bcaa´s 2200 Fórmula con tres aminoácidos encadenados. Los aminoácidos BCAA´S 2000 son esenciales para el crecimiento y la recuperación muscular. <br><br>
 
@@ -124,19 +120,19 @@
                 <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                          <i class="f7-icons">eye</i>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                          <i class="f7-icons">pie</i>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                          <i class="f7-icons">home_fill</i>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                          <i class="f7-icons">box</i>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                          <i class="f7-icons">calendar</i>
                         </a>
                     </div>
                 </div>

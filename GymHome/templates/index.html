@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../static/lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../static/css/modificacion.css">
+    <link rel="stylesheet" href="../static/lib/framework7/css/framework7-icons.css">
+
   </head>
   <body>
     <!-- App root element -->
@@ -33,11 +35,7 @@
                         <div id="registroBox" class="left">
                             <a href="{{url_for('register')}}" class="button external">Registro</a>
                         </div>
-                        <div id="logoImagenBox" class="title">
-                          <a style="height: 100%" href="{{url_for('index')}}" class="link external">
-                            <img id="logoImagen" src="../static/imagenes/GymHomeLogo2.png"/>
-                          </a>
-                        </div>
+                        
                         <div  id="loginBox" class="right">
                             {% if current_user.is_anonymous %}
                             <a class="link external" href="{{url_for('login')}}" class="button external">LOGIN</a>
@@ -77,32 +75,30 @@
                 </div>
 
 
-                <div id="navbarRedes">
-                      <a id="instagram" href="https://www.instagram.com/wix/"><img class="redesImagenes link external" src="../static/imagenes/instagram.jpg"/></a>
-                      <a id="facebook" href="https://www.facebook.com/GymHome-386565771806947/"><img class="redesImagenes link external" src="../static/imagenes/facebook.png"/></a>
-                      <a id="fitness" href="https://milo9402.wixsite.com/gymhome/informacion">
-                        <img class="link external" id="redesFitness" src="../static/imagenes/fitness.png"> 
-                      </a>
+
+
+                <div id="foro">
+                  <i class="f7-icons" style="float: left;margin-left: 17%">persons</i>
+                  <a style="width: 50%; margin:auto; background-color: white" href="{{url_for('foro')}}" class="link external" >¡Entra al chat!</a>
+                  <i class="f7-icons" style="float: right;margin-right: 16%">chats</i>
                 </div>
-                <br>
-                <div><a style="left:25%; width: 50%; margin:auto; border: 2px solid white; border-radius: 15px; background-color: white" href="{{url_for('foro')}}" class="link external" >Foro </a></div>
 
                 <div id="navbarBottom" class="toolbar toolbar-bottom-md">
                     <div class="toolbar-inner">
                         <a href="{{url_for('ejercicios')}}" class="link external">
-                          <img id="dumbbellIcono" src="../static/imagenes/dumbbellIcono.png"/>
+                          <i class="f7-icons">eye</i>
                         </a>
                         <a href="{{url_for('alimentacion')}}" class="link external">
-                          <img id="mealIcono" src="../static/imagenes/mealIcono.png"/>
+                          <i class="f7-icons">pie</i>
                         </a>
                         <a href="{{url_for('index')}}" class="link external">
-                          <img id="logoImagenBottom" src="../static/imagenes/GymHomeLogo2.png"/>
+                          <i class="f7-icons">home_fill</i>
                         </a>
                         <a href="{{url_for('suplementacion')}}" class="link external">
-                          <img id="suplementoIcono" src="../static/imagenes/suplementoIcono.png"/>
+                          <i class="f7-icons">box</i>
                         </a>
                         <a href="{{url_for('rutina')}}" class="link external">
-                          <img id="agendaIcono" src="../static/imagenes/agendaIcono.png"/>
+                          <i class="f7-icons">calendar</i>
                         </a>
                     </div>
                 </div>
