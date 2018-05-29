@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import render_template,flash,redirect,url_for,request
 from GymHome import GymHome,db,mail,socketio,Lista_foro
 from flask_socketio import SocketIO,send
@@ -8,7 +9,8 @@ from werkzeug.urls import url_parse
 from datetime import datetime
 from flask_mail import Message
 import smtplib
-
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 @GymHome.route('/')
 @GymHome.route('/index')
@@ -181,30 +183,31 @@ def listarRutina():
     return render_template('listarRutina.html', title='listarRutina', form=form, Pe1 =Pe1,Pe2=Pe2,Pe3=Pe3,Bi1 =Bi1,Bi2=Bi2,Bi3=Bi3,Bi4 =Bi4,Ho2=Ho2,Ho3=Ho3,Ho1 =Ho1,Ho4=Ho4,Cu1 =Cu1,Cu2=Cu2,Cu3=Cu3,Cu4 =Cu4,Fe1 =Fe1,Fe2=Fe2,Fe3=Fe3,Pa1 =Pa1,Pa2=Pa2)
 
 @GymHome.route('/comprar', methods=['GET', 'POST'])
+@login_required 
 def comprar():
     form=ComprarForm()
+    u = User.query.filter_by(username=current_user.username).first()
     suplemento = request.args.get('sup')
     if form.validate_on_submit():
-        from_addr = 'GymHomeApp1@gmail.com'
-        to = 'jhonarango.b93@gmail.com'
-       
-        msg = {}
-        msg['From'] ='GymHomeApp1@gmail.com'
-        msg['To'] = 'jhonarango.b93@gmail.com'
-        msg['Subject'] = "Compra"
-        body = 'Compra para el Usuario'+current_user.username+'fecha'
+        from_address = "GymHomeApp1@gmail.com"
+        to_address = "jhonarango.b93@gmail.com"
 
-        msg.attach(MIMEText(body, 'plain'))
-       
-        username = 'GymHomeApp1@gmail.com'
-        password = 'GymHome123'
+        message = "Cliente: "+ u.username + u.usersurname + "\nFecha: "+form.fecha.data + "\nHora: "+ form.hora.data + "\nDireccion: " + form.direccion.data + "\nTelefono: "+ form.telefono.data + "\nPedido: " + suplemento
 
-        server = smtplib.SMTP('smtp.gmail.com:587')
-        server.starttls()
-        server.login(username, password) 
-        text = msg.as_string()
-        server.sendmail(from_addr,to,)
-        server.quit()
+        mime_message = MIMEText(message)
+        mime_message["From"] = from_address
+        mime_message["To"] = to_address
+        mime_message["Subject"] = "Venta Registrada - GymHomeApp"
+
+        smtp = smtplib.SMTP("smtp.gmail.com", 587)
+        smtp.ehlo()
+        smtp.starttls()
+        smtp.ehlo()
+        smtp.login(from_address, "GymHome123")
+        smtp.sendmail(from_address, to_address, mime_message.as_string())
+        smtp.quit()
+        return redirect(url_for('comprarFin'))
+
     return render_template('comprar.html',form=form,suplemento=suplemento)
 
 @GymHome.route('/comprarFin')

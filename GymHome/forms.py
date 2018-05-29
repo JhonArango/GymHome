@@ -18,9 +18,10 @@ class dataForm(FlaskForm):
     submit = SubmitField('Iniciar sección')
 
 class ComprarForm(FlaskForm):
-    suplemento = StringField('suplemento', validators=[DataRequired()])
     fecha = StringField('fecha', validators=[DataRequired()])
     hora = StringField('hora', validators=[DataRequired()]) 
+    direccion = StringField('direccion', validators=[DataRequired()]) 
+    telefono = StringField('telefono', validators=[DataRequired()]) 
     submit = SubmitField('Iniciar sección')
 
 class RutinaForm(FlaskForm):
