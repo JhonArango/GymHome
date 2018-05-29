@@ -195,7 +195,7 @@ def comprar():
         to_address = "jhonarango.b93@gmail.com"
         contrasenaemail="GymHome123"
 
-        message = "Cliente: "+ u.username + u.usersurname + "\nFecha: "+form.fecha.data + "\nHora: "+ form.hora.data + "\nDireccion: " + form.direccion.data + "\nTelefono: "+ form.telefono.data + "\nPedido: " + suplemento
+        message = "Cliente: "+ u.username +" "+ u.usersurname + "\nFecha: "+form.fecha.data + "\nHora: "+ form.hora.data + "\nDireccion: " + form.direccion.data + "\nTelefono: "+ form.telefono.data + "\nPedido: " + suplemento
 
         mime_message = MIMEText(message)
         mime_message["From"] = from_address
